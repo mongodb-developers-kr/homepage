@@ -8,13 +8,20 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-3 space-y-12">
             <div>
               <h4 className="font-bold mb-6">Disclaimer</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed space-y-2">
                 MongoDB 한국 사용자 모임은 독립적인 커뮤니티로서, 모든 활동은
-                MongoDB와 관련이 없습니다. MongoDB 커뮤니티 참여는 기술 교육 및
-                공유와 토론을 장려하고 있으며, MongoDB 커뮤니티 행동 강령에
-                상반되는 행동을 용납하지 않습니다. 더 자세한 것은 MongoDB
-                커뮤니티 행동 강령을 참고하세요. <br />
-                [있으면 링크]MongoDB Korea Usergroup Korea.
+                MongoDB와 관련이 없습니다. <br /> MongoDB 커뮤니티 참여는 기술
+                교육 및 공유와 토론을 장려하고 있으며, MongoDB 커뮤니티 행동
+                강령에 상반되는 행동을 용납하지 않습니다. <br /> 더 자세한 것은
+                MongoDB 커뮤니티 행동 강령을 참고하세요. <br />
+                <a
+                  href="https://www.mongodb.com/community-code-of-conduct"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#00ed64] transition-colors text-bold underline"
+                >
+                  MongoDB Community Code of Conduct
+                </a>
               </p>
             </div>
             <div>
