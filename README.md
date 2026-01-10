@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# MongoDB 한국 사용자 모임 (MUG Korea) 홈페이지 (Draft)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MongoDB 한국 사용자 모임의 공식 홈페이지(Draft)입니다.
 
-Currently, two official plugins are available:
+- 현재는 가안(Draft)만 생성된 상태로, 프로젝트 구성 규칙, 활용 라이브러리, 사용성은 향후 참여자 분들의 활동이 반영되면 변경될 수 있음을 알려드립니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 페이지 미리보기
 
-## React Compiler
+### 1. 헤더 및 히어로 섹션
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![메인 페이지 1](./docs/images/main-1.png)
 
-## Expanding the ESLint configuration
+- **고정 헤더**: MongoDB 한국 사용자 모임 로고와 네비게이션 메뉴
+- **히어로 섹션**: MongoDB 한국 사용자 모임 소개 및 Slack 채널 참여 버튼
+- **통계 섹션**: 회원 수 및 이벤트 정보
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. 모임 및 그룹 섹션
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![메인 페이지 2](./docs/images/main-2.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **모임 섹션**: 지역별 모임 정보 (현재 서울 지역 모임 운영 중)
+- 각 모임의 설명과 참여 인원 정보 제공
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. 이벤트 섹션
+
+![메인 페이지 3](./docs/images/main-3.png)
+
+- **이벤트 목록**: 다가오는 이벤트와 지난 이벤트 정보
+- 각 이벤트의 날짜, 장소, 참여 인원 정보 제공
+- 녹화본 (예시)
+
+### 4. 파트너 및 푸터 섹션
+
+![메인 페이지 4](./docs/images/main-4.png)
+
+- **파트너 & 스폰서**: 커뮤니티를 지원하는 파트너사 소개 (예시)
+- **푸터**:
+  - Disclaimer: 커뮤니티 독립성 및 행동 강령 안내 (예시)
+  - Resources: 문서, 튜토리얼, 블로그, 뉴스레터 링크 (예시)
+  - Connect: GitHub, YouTube, Facebook 소셜 미디어 링크 (예시)
+
+## 🛠 기술 스택
+
+> (스타일링, 아이콘 등에 사용되는 라이브러리는 변경될 수 있습니다.)
+
+- **프레임워크**: React 19
+- **빌드 도구**: Vite
+- **스타일링**: Tailwind CSS
+- **아이콘**: Lucide React
+- **아키텍처**: Feature-Sliced Design (FSD)
+- **패키지 매니저**: pnpm
+
+## 📁 프로젝트 구조
+
+(앞으로 변경될 수 있습니다.)
+
+```
+src/
+├── app/              # 앱 설정 및 전역 스타일
+├── pages/            # 페이지 컴포넌트
+│   └── landing/      # 랜딩 페이지
+├── widgets/          # 독립적인 UI 블록
+│   ├── Header/       # 헤더 위젯
+│   ├── Hero/         # 히어로 섹션
+│   ├── Stats/        # 통계 섹션
+│   ├── Groups/       # 모임 섹션
+│   ├── Events/       # 이벤트 섹션
+│   ├── Partners/     # 파트너 섹션
+│   └── Footer/       # 푸터
+├── shared/           # 공통 컴포넌트 및 유틸리티
+│   ├── ui/           # UI 컴포넌트 (Button, Card 등)
+│   └── lib/          # 유틸리티 함수
+└── main.tsx          # 앱 진입점
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 시작하기
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 설치
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
 ```
+
+### 개발 서버 실행
+
+```bash
+pnpm dev
+```
+
+개발 서버가 실행되면 브라우저에서 `http://localhost:5173`으로 접속할 수 있습니다.
+
+### 빌드
+
+```bash
+pnpm build
+```
+
+### 미리보기
+
+```bash
+pnpm preview
+```
+
+## 주요 기능 (구상중, Draft 버전에서 고려한 내용만 포함하고 있습니다.)
+
+- 반응형 디자인 (모바일, 태블릿, 데스크탑 지원)
+- 다크 테마 기반 UI
+- MongoDB 브랜드 컬러 적용
+- 소셜 미디어 링크 통합
+- 이벤트 정보 관리
+- 모임 및 그룹 정보 제공
+
+## 🤝 기여하기
+
+MongoDB 한국 사용자 모임은 오픈소스 커뮤니티입니다. 기여를 환영합니다!
+
+1. 이 저장소를 포크하세요
+2. 새로운 기능 브랜치를 생성하세요 (`git checkout -b feature/AmazingFeature`)
+3. 변경사항을 커밋하세요 (`git commit -m 'Add some AmazingFeature'`)
+4. 브랜치에 푸시하세요 (`git push origin feature/AmazingFeature`)
+5. Pull Request를 열어주세요
+
+## 📄 라이선스
+
+이 프로젝트는 MongoDB 한국 사용자 모임의 독립적인 커뮤니티 프로젝트입니다.
+
+## 🔗 링크
+
+- **GitHub**: [https://github.com/mugkr/homepage](https://github.com/mugkr/homepage)
+- **MongoDB Community Code of Conduct**: [https://www.mongodb.com/community-code-of-conduct](https://www.mongodb.com/community-code-of-conduct)
+
+---
+
+© 2026 MongoDB Korea Usergroup - MUG Korea. All Rights Reserved.
