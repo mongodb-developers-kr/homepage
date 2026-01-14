@@ -1,11 +1,12 @@
-import { MessageSquare } from 'lucide-react'
-import { Button } from '../../shared/ui/Button'
+import { Button } from '@shared/ui/Button'
+import { FiMessageSquare } from 'react-icons/fi'
 
 export const Hero = () => {
   return (
-    <section className="pt-40 pb-20 relative overflow-hidden">
+    <section className="relative isolate pt-40 pb-20 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00ed64]/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl mb-6 tracking-tight leading-tight">
@@ -18,7 +19,7 @@ export const Hero = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button className="gap-2 font-bold">
-            <MessageSquare size={20} />
+            <FiMessageSquare size={20} />
             Slack 채널 참여하기
           </Button>
           {/* <Button variant="outline" className="gap-2 border-white/10 text-white hover:bg-white/5">

@@ -1,8 +1,8 @@
-import { Facebook, Github, Youtube } from 'lucide-react'
+import { FaGithub, FaSlack } from 'react-icons/fa'
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#011621] py-20 border-t border-white/5">
+    <footer className="relative isolate bg-bg-primary py-20 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-3 space-y-12">
@@ -18,7 +18,7 @@ export const Footer = () => {
                   href="https://www.mongodb.com/community-code-of-conduct"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#00ed64] transition-colors text-bold underline"
+                  className="hover:text-primary transition-colors text-bold underline"
                 >
                   MongoDB Community Code of Conduct
                 </a>
@@ -29,34 +29,22 @@ export const Footer = () => {
               <ul className="flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-400">
                 <li>
                   <a
-                    href="#"
-                    className="hover:text-[#00ed64] transition-colors"
+                    href="https://www.mongodb.com/docs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
                   >
-                    Documentation
+                    MongoDB 공식 문서
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="hover:text-[#00ed64] transition-colors"
+                    href="https://learn.mongodb.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
                   >
-                    Tutorials
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-[#00ed64] transition-colors"
-                  >
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-[#00ed64] transition-colors"
-                  >
-                    Newsletter
+                    MongoDB 학습 하기 & Skill Badges
                   </a>
                 </li>
               </ul>
@@ -70,21 +58,17 @@ export const Footer = () => {
                 href="https://github.com/mugkr/homepage"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-[#00ed64]/20 hover:text-[#00ed64] transition-all"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-text-muted hover:bg-primary/20 hover:text-primary transition-all"
               >
-                <Github size={20} />
+                <FaGithub size={20} />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-[#00ed64]/20 hover:text-[#00ed64] transition-all"
+                href="https://mongodevkr.slack.com/archives/C09J83YK45P"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-text-muted hover:bg-primary/20 hover:text-primary transition-all"
               >
-                <Youtube size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-[#00ed64]/20 hover:text-[#00ed64] transition-all"
-              >
-                <Facebook size={20} />
+                <FaSlack size={20} />
               </a>
             </div>
           </div>

@@ -1,16 +1,16 @@
-import { Header } from '../../widgets/Header/Header';
-import { Hero } from '../../widgets/Hero/Hero';
-import { Stats } from '../../widgets/Stats/Stats';
-import { Groups } from '../../widgets/Groups/Groups';
-import { Events } from '../../widgets/Events/Events';
-import { Partners } from '../../widgets/Partners/Partners';
-import { Footer } from '../../widgets/Footer/Footer';
+import { Events } from '@widgets/events/Events'
+import { Footer } from '@widgets/footer/Footer'
+import { Groups } from '@widgets/groups/Groups'
+import { Header } from '@widgets/header/Header'
+import { Hero } from '@widgets/hero/Hero'
+import { Partners } from '@widgets/partners/Partners'
+import { Stats } from '@widgets/stats/Stats'
 
 export const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="relative overflow-hidden">
         <Hero />
         <Stats />
         <Groups />
@@ -19,5 +19,5 @@ export const LandingPage = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
