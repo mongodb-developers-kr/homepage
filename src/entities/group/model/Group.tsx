@@ -7,6 +7,7 @@ export type Group = {
   description: string
   membersCount: number
   buttonText?: string
+  link?: string
   createdAt: string
   updatedAt: string
 }

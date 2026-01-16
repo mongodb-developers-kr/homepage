@@ -5,13 +5,13 @@ const stats: Stat[] = [
   {
     id: 'members',
     icon: <FiUsers className="text-primary" size={24} />,
-    value: 300,
+    value: 200,
     label: '회원',
   },
   {
     id: 'events',
     icon: <FiCalendar className="text-primary" size={24} />,
-    value: 1,
+    value: 4,
     label: '이벤트',
   },
 ]
@@ -27,9 +27,9 @@ export const StatsGrid = () => {
             </div>
             <div className="text-xl font-bold mb-1">
               {stat.label === '회원' ? (
-                <span>{stat.value}+ 회원</span>
+                <span>{stat.value}+ 커뮤니티 멤버</span>
               ) : (
-                <span>{stat.value} 이벤트</span>
+                <span>{stat.value} 개의 누적 이벤트</span>
               )}
             </div>
           </div>

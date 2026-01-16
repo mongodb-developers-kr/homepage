@@ -1,6 +1,6 @@
-# MongoDB 한국 사용자 모임 (MUG Korea) 홈페이지 (Draft)
+# MongoDB 한국 개발자 모임 (MongoDB Developers KR) 홈페이지 (Draft)
 
-MongoDB 한국 사용자 모임의 공식 홈페이지(Draft)입니다.
+MongoDB 한국 개발자 모임의 공식 홈페이지(Draft)입니다.
 
 - 현재는 가안(Draft)만 생성된 상태로, 프로젝트 구성 규칙, 활용 라이브러리, 사용성은 향후 참여자 분들의 활동이 반영되면 변경될 수 있음을 알려드립니다.
 
@@ -10,8 +10,8 @@ MongoDB 한국 사용자 모임의 공식 홈페이지(Draft)입니다.
 
 ![메인 페이지 1](./docs/images/main-1.png)
 
-- **고정 헤더**: MongoDB 한국 사용자 모임 로고와 네비게이션 메뉴
-- **히어로 섹션**: MongoDB 한국 사용자 모임 소개 및 Slack 채널 참여 버튼
+- **고정 헤더**: MongoDB 한국 개발자 모임 로고와 네비게이션 메뉴
+- **히어로 섹션**: MongoDB 한국 개발자 모임 소개 및 Slack 채널 참여 버튼
 - **통계 섹션**: 회원 수 및 이벤트 정보
 
 ### 2. 모임 및 그룹 섹션
@@ -112,7 +112,7 @@ pnpm preview
 
 ## 🤝 기여하기
 
-MongoDB 한국 사용자 모임은 오픈소스 커뮤니티입니다. 기여를 환영합니다!
+MongoDB 한국 개발자 모임은 오픈소스 커뮤니티입니다. 기여를 환영합니다!
 
 1. 이 저장소를 포크하세요
 2. 새로운 기능 브랜치를 생성하세요 (`git checkout -b feature/AmazingFeature`)
@@ -122,13 +122,13 @@ MongoDB 한국 사용자 모임은 오픈소스 커뮤니티입니다. 기여를
 
 ## 📄 라이선스
 
-이 프로젝트는 MongoDB 한국 사용자 모임의 독립적인 커뮤니티 프로젝트입니다.
+이 프로젝트는 MongoDB 한국 개발자 모임의 독립적인 커뮤니티 프로젝트입니다.
 
 ## 🔗 링크
 
-- **GitHub**: [https://github.com/mugkr/homepage](https://github.com/mugkr/homepage)
+- **GitHub Organization**: [https://github.com/MongoDB Developers KRkr/homepage](https://github.com/mongodb-developers-kr)
 - **MongoDB Community Code of Conduct**: [https://www.mongodb.com/community-code-of-conduct](https://www.mongodb.com/community-code-of-conduct)
 
 ---
 
-© 2026 MongoDB Korea Usergroup - MUG Korea. All Rights Reserved.
+© 2026 MongoDB Korea Usergroup - MongoDB Developers KR Korea. All Rights Reserved.

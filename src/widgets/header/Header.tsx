@@ -14,7 +14,7 @@ export const Header = () => {
               />
             </span>
             <span className="text-xl font-bold tracking-tight flex-shrink-0">
-              한국 사용자 모임
+              한국 개발자 모임
             </span>
           </div>
         </div>
