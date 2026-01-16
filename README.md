@@ -27,7 +27,7 @@ MongoDB 한국 개발자 모임의 공식 홈페이지(Draft)입니다.
 
 - **이벤트 목록**: 다가오는 이벤트와 지난 이벤트 정보
 - 각 이벤트의 날짜, 장소, 참여 인원 정보 제공
-- 녹화본 (예시)
+- MongoDB University 링크 제공
 
 ### 4. 파트너 및 푸터 섹션
 
@@ -37,7 +37,8 @@ MongoDB 한국 개발자 모임의 공식 홈페이지(Draft)입니다.
 - **푸터**:
   - Disclaimer: 커뮤니티 독립성 및 행동 강령 안내 (예시)
   - Resources: 문서, 튜토리얼, 블로그, 뉴스레터 링크 (예시)
-  - Connect: GitHub, YouTube, Facebook 소셜 미디어 링크 (예시)
+  - Connect: GitHub Slack 등 소셜 미디어 링크 (예시)
+    공
 
 ## 기술 스택
 
