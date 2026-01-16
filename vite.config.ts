@@ -6,6 +6,10 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: '/homepage/',
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
       '@app': path.resolve(__dirname, './src/app'),
