@@ -15,7 +15,8 @@ export const Hero = () => {
         </h1>
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           MongoDB 한국 개발자 모임에 오신 것을 환영합니다. <br /> 실무 경험,
-          학습, 밋업 정보를 함께 나누는 커뮤니티입니다.
+          학습, 밋업 정보를 함께 나누는 커뮤니티입니다. <br /> (
+          <b>현재는 가오픈 상태로, 추후 공식 오픈 예정입니다.</b>)
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
