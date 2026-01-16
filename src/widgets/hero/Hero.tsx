@@ -24,14 +24,19 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="gap-2 font-bold">
+          <Button
+            className="gap-2 font-bold"
+            onClick={() => {
+              window.open(
+                'https://mongodevkr.slack.com/archives/C09J83YK45P',
+                '_blank',
+                'noopener,noreferrer',
+              )
+            }}
+          >
             <FiMessageSquare size={20} />
             Slack 커뮤니티에 참여하기
           </Button>
-          {/* <Button variant="outline" className="gap-2 border-white/10 text-white hover:bg-white/5">
-            Upcoming Meetups
-            <ArrowRight size={20} />
-          </Button> */}
         </div>
       </div>
     </section>
