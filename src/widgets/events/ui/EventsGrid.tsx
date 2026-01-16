@@ -17,7 +17,7 @@ const events: Event[] = [
     id: 'mug-korea-seoul-2026-1',
     status: 'preparation',
     description: '다가오는 이벤트',
-    title: 'MUG Seoul MeetUp #2',
+    title: 'MUG Seoul MeetUp #2 (예정)',
     date: '2026-02-01',
     location: '서울 지역',
     attendees: '000',
