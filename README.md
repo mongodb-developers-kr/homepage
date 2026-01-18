@@ -69,13 +69,14 @@ src/
 ├── pages/            # 페이지 컴포넌트
 │   └── landing/      # 랜딩 페이지
 ├── widgets/          # 독립적인 UI 블록
-│   ├── Header/       # 헤더 위젯
-│   ├── Hero/         # 히어로 섹션
-│   ├── Stats/        # 통계 섹션
-│   ├── Groups/       # 모임 섹션
-│   ├── Events/       # 이벤트 섹션
-│   ├── Partners/     # 파트너 섹션
-│   └── Footer/       # 푸터
+│   ├── header/       # 헤더 위젯
+│   ├── hero/         # 히어로 섹션
+│   ├── stats/        # 통계 섹션
+│   ├── groups/       # 모임 섹션
+│   ├── events/       # 이벤트 섹션
+│   ├── qna/       # 이벤트 섹션
+│   ├── partners/     # 파트너 섹션
+│   └── footer/       # 푸터
 ├── shared/           # 공통 컴포넌트 및 유틸리티
 │   ├── ui/           # UI 컴포넌트 (Button, Card 등)
 │   └── lib/          # 유틸리티 함수
