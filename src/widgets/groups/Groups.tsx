@@ -2,7 +2,7 @@ import { GroupsGrid } from './ui/GroupsGrid'
 
 export const Groups = () => {
   return (
-    <section className="relative isolate py-24 bg-bg-surface -mt-px z-10">
+    <section id="groups" className="relative isolate py-24 bg-bg-surface -mt-px z-10">
       <div className="absolute inset-0 bg-bg-surface -z-10" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
