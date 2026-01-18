@@ -46,9 +46,7 @@ export const Header = () => {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
           <a
             href="#about"
-            onClick={(e) => {
-              e.preventDefault()
-            }}
+            onClick={(e) => scrollToSection('about', e)}
             className="hover:text-primary transition-colors"
           >
             About
