@@ -9,7 +9,7 @@
 
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #011621; /* Will be replaced with CSS variable later */
+  background-color: #011621; /* Can be replaced with CSS variable later */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

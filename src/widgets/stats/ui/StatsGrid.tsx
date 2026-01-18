@@ -1,5 +1,5 @@
 import type { Stat } from '@entities/stat'
-import { FiCalendar, FiUsers } from 'react-icons/fi'
+import { FiCalendar, FiInfo, FiUsers } from 'react-icons/fi'
 
 const stats: Stat[] = [
   {
@@ -27,9 +27,21 @@ export const StatsGrid = () => {
             </div>
             <div className="text-xl font-bold mb-1">
               {stat.label === '회원' ? (
-                <span>{stat.value}+ 커뮤니티 멤버</span>
+                <span>{'{ 커뮤니티 멤버: '} {'{ \$gte: '}{stat.value}{' }'}{' }'} 
+                <div className="text-xs text-gray-400">
+                  <div className="flex items-center gap-2 justify-center mt-1">
+                    <FiInfo size={16} /> Slack 기준
+                  </div>
+                </div>
+                </span>
+                
               ) : (
-                <span>{stat.value} 개의 누적 이벤트</span>
+                <span>{'{ 누적 이벤트: '}{stat.value}{' }'} <div className="text-sm text-gray-400">
+                    <div className="flex items-center gap-2 justify-center mt-1">
+                      <FiInfo size={16} /> 공식 밋업 & 기술 세션
+                    </div>
+                  </div>
+                </span>
               )}
             </div>
           </div>
