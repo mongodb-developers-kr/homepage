@@ -29,9 +29,17 @@ MongoDB 한국 개발자 모임의 공식 홈페이지(Draft)입니다.
 - 각 이벤트의 날짜, 장소, 참여 인원 정보 제공
 - MongoDB University 링크 제공
 
-### 4. 파트너 및 푸터 섹션
+### 4. Q&A 섹션
 
 ![메인 페이지 4](./images/main-4.png)
+- MongoDB Developers KR 에 대한 주요 질문들의 답변 소개
+- 질문하기
+  - Google Link
+  - Slack Link
+
+### 5. 파트너 및 푸터 섹션
+
+![메인 페이지 4](./images/main-5.png)
 
 - **파트너 & 스폰서**: 커뮤니티를 지원하는 파트너사 소개 (예시)
 - **푸터**:

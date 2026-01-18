@@ -8,7 +8,7 @@ export const QnA = () => {
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-bold mb-4">자주 묻는 질문</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            MongoDB Developers KR에 관심을 가지신 분들이
+            MongoDB Developers KR에 관심을 가지신 분들이 <br/>
             자주 궁금해하시는 질문들을 정리해봤습니다.
           </p>
         </div>
