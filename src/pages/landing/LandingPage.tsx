@@ -4,6 +4,7 @@ import { Groups } from '@widgets/groups/Groups'
 import { Header } from '@widgets/header/Header'
 import { Hero } from '@widgets/hero/Hero'
 import { Partners } from '@widgets/partners/Partners'
+import { QnA } from '@widgets/qna/QnA'
 import { Stats } from '@widgets/stats/Stats'
 
 export const LandingPage = () => {
@@ -15,6 +16,7 @@ export const LandingPage = () => {
         <Stats />
         <Groups />
         <Events />
+        <QnA />
         <Partners />
       </main>
       <Footer />

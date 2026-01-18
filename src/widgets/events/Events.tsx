@@ -15,7 +15,7 @@ export const Events = () => {
           <p>
             경험을 공유하고 피드백을 나누고 싶으신가요? <br/>
             - 완성된 발표가 아니어도 괜찮습니다. <br/>
-            - 짧은 사례 공유, 시행착오, MongoDB 를 사용하며 겪은 문제 등 모든 것을 환영합니다.
+            - 짧은 사례 공유, 시행착오, MongoDB 를 사용하며 경험한 모든 것을 환영합니다.
           </p> <br/>
           
           <Button variant="outline" className="w-fit bg-secondary text-text-primary hover:bg-primary hover:text-text-dark hover:border-primary"

@@ -78,20 +78,18 @@ export const Header = () => {
             Events
           </a>
           <a
+            href="#qna"
+            onClick={(e) => scrollToSection('qna', e)}
+            className="hover:text-primary transition-colors"
+          >
+            Q & A
+          </a>
+          <a
             href="#partners"
             onClick={(e) => scrollToSection('partners', e)}
             className="hover:text-primary transition-colors"
           >
             Partners
-          </a>
-          <a
-            href="#qa"
-            onClick={(e) => {
-              e.preventDefault()
-            }}
-            className="hover:text-primary transition-colors"
-          >
-            Q & A
           </a>
         </nav>
         {/* 
