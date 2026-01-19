@@ -260,9 +260,18 @@ export const EventsGrid = () => {
   const getTranslateX = () => {
     if (!containerRef.current) return 0
     const containerWidth = containerRef.current.clientWidth
-    const cardWidth = (containerWidth - GAP * (cardsPerView - 1)) / cardsPerView
-
-    return currentIndex * (cardWidth + GAP)
+    // 모바일에서는 카드 너비를 100%로 계산 (padding 제외)
+    const padding = 48 // px-12 = 48px (좌우 각 24px)
+    const availableWidth = containerWidth - padding
+    
+    if (cardsPerView === 1) {
+      // 모바일: 카드 하나의 너비만큼 이동 (100% = availableWidth)
+      return currentIndex * availableWidth
+    } else {
+      // 데스크톱/태블릿: 카드 너비 + gap만큼 이동
+      const cardWidth = (availableWidth - GAP * (cardsPerView - 1)) / cardsPerView
+      return currentIndex * (cardWidth + GAP)
+    }
   }
 
   // 3개 초과일 때 슬라이드 표시
@@ -307,7 +316,10 @@ export const EventsGrid = () => {
         style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
       >
         <div
-          className="flex gap-8 transition-transform duration-300 ease-out"
+          className={cn(
+            "flex transition-transform duration-300 ease-out",
+            cardsPerView === 1 ? "gap-0" : "gap-8"
+          )}
           style={{
             transform: `translateX(-${getTranslateX()}px)`,
           }}
@@ -317,7 +329,9 @@ export const EventsGrid = () => {
               key={event.id}
               className="flex-shrink-0"
               style={{
-                width: `calc((100% - ${(cardsPerView - 1) * 32}px) / ${cardsPerView})`,
+                width: cardsPerView === 1 
+                  ? '100%' 
+                  : `calc((100% - ${(cardsPerView - 1) * GAP}px) / ${cardsPerView})`,
               }}
             >
               {renderEventCard(event)}
