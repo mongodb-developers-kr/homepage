@@ -256,7 +256,8 @@ export const EventsGrid = () => {
       </div>
     )
   }
-  const GAP = 32
+  const GAP = 32 // 데스크톱/태블릿 gap
+  const MOBILE_GAP = 16 // 모바일 gap (gap-4)
   const getTranslateX = () => {
     if (!containerRef.current) return 0
     const containerWidth = containerRef.current.clientWidth
@@ -265,8 +266,9 @@ export const EventsGrid = () => {
     const availableWidth = containerWidth - padding
     
     if (cardsPerView === 1) {
-      // 모바일: 카드 하나의 너비만큼 이동 (100% = availableWidth)
-      return currentIndex * availableWidth
+      // 모바일: 카드 너비 + gap만큼 이동
+      const cardWidth = availableWidth
+      return currentIndex * (cardWidth + MOBILE_GAP)
     } else {
       // 데스크톱/태블릿: 카드 너비 + gap만큼 이동
       const cardWidth = (availableWidth - GAP * (cardsPerView - 1)) / cardsPerView
@@ -318,7 +320,7 @@ export const EventsGrid = () => {
         <div
           className={cn(
             "flex transition-transform duration-300 ease-out",
-            cardsPerView === 1 ? "gap-0" : "gap-8"
+            cardsPerView === 1 ? "gap-4" : "gap-8"
           )}
           style={{
             transform: `translateX(-${getTranslateX()}px)`,
