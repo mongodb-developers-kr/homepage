@@ -30,7 +30,7 @@ export const StatsGrid = () => {
                 <span>{'{ 커뮤니티 멤버: '} {'{ \$gte: '}{stat.value}{' }'}{' }'} 
                 <div className="text-xs text-gray-400">
                   <div className="flex items-center gap-2 justify-center mt-1">
-                    <FiInfo size={16} /> Slack 기준
+                    <FiInfo size={16} /> Slack & MeetUp 기준
                   </div>
                 </div>
                 </span>
