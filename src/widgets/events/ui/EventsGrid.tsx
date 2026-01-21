@@ -1,4 +1,5 @@
 import type { Event } from '@entities/event'
+import { EventCategoryText, EventDescription, EventTypeText } from '@entities/event'
 import { badgeStyles } from '@shared/lib/styles'
 import { cn } from '@shared/lib/utils'
 import { Button } from '@shared/ui/Button'
@@ -8,17 +9,28 @@ import {
   FiCalendar,
   FiChevronLeft,
   FiChevronRight,
+  FiClock,
   FiMapPin,
   FiUsers,
 } from 'react-icons/fi'
 
+/**
+ * 이벤트 데이터 입니다.
+ * 데이터 소스 API 연동 후 데이터베이스로 이동할 예정입니다.
+ */
 const events: Event[] = [
   {
     id: 'mug-korea-seoul-2026-1',
+    category: 'meetup',
+    type: 'inPerson',
     status: 'preparation',
-    description: '다가오는 이벤트',
+    statusText: EventDescription.preparation,
+    time: '19:00 ~ 21:30',
+    description: `연사 및 세션을 최종 조율 중입니다. 
+    조금만 기다려주세요! 
+    곧 공개됩니다 🙂`,
     title: 'MUG Seoul MeetUp #2 (공지 예정)',
-    date: '2026-02-01',
+    date: '2026-02-26',
     location: '서울 지역',
     attendees: '000',
     action: 'MeetUp 페이지 바로가기',
@@ -28,12 +40,20 @@ const events: Event[] = [
   },
   {
     id: 'ai-skills-session-3',
+    category: 'skillsSession',
+    type: 'online',
     status: 'closed',
-    description: '지난 이벤트',
-    title: 'MongoDB AI Skills Session #3: AI Agent 실습',
-    date: '2025-12-19',
+    statusText: EventDescription.closed,
+    time: '09:00 ~ 12:00',
+    description: `- AI 에이전트의 기본 개념 이해
+    - MongoDB를 활용한 AI 에이전트 상태 관리
+    - 다양한 AI 에이전트 프레임워크 사용
+    `,
+    title: `MongoDB AI Skills Session #3: 
+    AI 에이전트 구축 A to Z`,
+    date: '2025-12-20',
     location: '온라인',
-    attendees: '45',
+    attendees: '42',
     action: 'MongoDB University 강의 보기',
     link: 'https://learn.mongodb.com/courses/ai-agents-with-mongodb?sessionFields=%5B%5B%22learning-method%22%2C%22Skill%22%5D%5D',
     createdAt: '2026-01-15',
@@ -41,12 +61,20 @@ const events: Event[] = [
   },
   {
     id: 'ai-skills-session-2',
+    category: 'skillsSession',
+    type: 'online',
     status: 'closed',
-    description: '지난 이벤트',
-    title: 'MongoDB AI Skills Session #2: RAG 실습',
-    date: '2025-12-12',
+    statusText: EventDescription.closed,
+    time: '09:00 ~ 12:00',
+    description: `- RAG 아키텍처 이해
+    - MongoDB와 임베딩 모델 및 LLM 연동 방법
+    - 데이터 검색 및 답변 생성 과정 구현
+    `,
+    title: `MongoDB AI Skills Session #2: 
+    MongoDB 를 사용한 RAG앱 구축`,
+    date: '2025-12-13',
     location: '온라인',
-    attendees: '52',
+    attendees: '59',
     action: 'MongoDB University 강의 보기',
     link: 'https://learn.mongodb.com/courses/rag-with-mongodb?sessionFields=%5B%5B%22learning-method%22%2C%22Skill%22%5D%5D',
     createdAt: '2026-01-15',
@@ -54,12 +82,20 @@ const events: Event[] = [
   },
   {
     id: 'ai-skills-session-1',
+    category: 'skillsSession',
+    type: 'online',
     status: 'closed',
-    description: '지난 이벤트',
-    title: 'MongoDB AI Skills Session #1: Vector Search 실습',
-    date: '2025-12-05',
+    statusText: EventDescription.closed,
+    time: '09:00 ~ 12:00',
+    description: `- 벡터 검색의 기본 개념 이해
+    - MongoDB Atlas Vector Search 설정 및 ㅁ활용
+    - 다양한 벡터 검색 알고리즘 및 기법 적용
+    `,
+    title: `MongoDB AI Skills Session #1: 
+    벡터 검색: 초급부터 고급까지`,
+    date: '2025-12-06',
     location: '온라인',
-    attendees: '52',
+    attendees: '122',
     action: 'MongoDB University 강의 보기',
     link: 'https://learn.mongodb.com/courses/vector-search-fundamentals?sessionFields=%5B%5B%22learning-method%22%2C%22Skill%22%5D%5D',
     createdAt: '2026-01-15',
@@ -67,19 +103,28 @@ const events: Event[] = [
   },
   {
     id: 'mug-korea-seoul-2025-11',
+    category: 'meetup',
+    type: 'inPerson',
     status: 'closed',
-    description: '지난 이벤트',
-    title: 'MUG Seoul MeetUp #1',
+    statusText: EventDescription.closed,
+    time: '12:00 ~ 14:30',
+    description: `- MongoDB와 AI 시대의 데이터 전략
+    - 실전 의료 데이터 사례 공유
+    - 커뮤니티 로드맵 & 네트워킹`,
+    title: 'MUG Seoul MeetUp #1:',
     date: '2025-11-28',
     location: '서울 지역',
-    attendees: '42',
+    attendees: '31',
     action: '후기 보기 (Slack)',
     link: 'https://mongodevkr.slack.com/archives/C09JNUJ5XEC/p1764573035347299',
     createdAt: '2026-01-15',
     updatedAt: '2026-01-15',
   },
 ]
-
+/* 
+이벤트 섹션 카드 그리드를 생성하는 컴포넌트 입니다.
+모바일 카드 넓이를 100%로, 화면 위치는 웹과 다르게 가운데로 위치하도록 조정하는 방법을 찾는 중입니다.
+**/ 
 export const EventsGrid = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
@@ -190,24 +235,46 @@ export const EventsGrid = () => {
   const isAtEnd = currentIndex === maxIndex
   const renderEventCard = (event: Event) => (
     <Card className="flex flex-col h-full bg-bg-tertiary border-border">
-      <div className="mb-4">
+      <div className="mb-4 flex items-center gap-2">
         <span
           className={cn(
-            'text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full',
+            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full',
             event.status === 'open' || event.status === 'preparation'
               ? badgeStyles.upcoming
               : badgeStyles.past,
           )}
         >
-          {event.description}
+          {event.statusText}
+        </span>
+        <span className={cn(
+            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary' 
+
+          )}>{EventTypeText[event.type]}</span>
+        <span
+          className={cn(
+            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary' 
+          )}
+        >
+          {EventCategoryText[event.category]}
         </span>
       </div>
-      <h3 className="text-xl font-bold mb-6 flex-grow">{event.title}</h3>
-
+      <div className="mb-6 min-h-[72px] max-h-[72px] overflow-y-auto">
+        <h3 className="text-xl font-bold whitespace-pre-line leading-tight">{event.title}</h3>
+      </div>
+      <div className="mb-6 min-h-[120px] max-h-[120px] overflow-y-auto">
+        <p className="text-gray-400 whitespace-pre-line">{event.description}</p>
+      </div>
       <div className="space-y-3 mb-8 text-sm text-gray-400">
         <div className="flex items-center gap-2">
           <FiCalendar size={16} />
-          <span>{new Date(event.date).toLocaleDateString()}</span>
+          <span>{
+          new Date(event.date).toLocaleDateString('ko-KR', { 
+            year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' 
+            })}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <FiClock size={16} />
+          <span>{event.time}</span>
         </div>
         <div className="flex items-center gap-2">
           <FiMapPin size={16} />
@@ -261,7 +328,7 @@ export const EventsGrid = () => {
   const getTranslateX = () => {
     if (!containerRef.current) return 0
     const containerWidth = containerRef.current.clientWidth
-    // 모바일에서는 카드 너비를 100%로 계산 (padding 제외)
+    // 모바일에서는 카드 너비를 100%로 계산 (padding 제외 -> 조정 필요.)
     const padding = 48 // px-12 = 48px (좌우 각 24px)
     const availableWidth = containerWidth - padding
     
