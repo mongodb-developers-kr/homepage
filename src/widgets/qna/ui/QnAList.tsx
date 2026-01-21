@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import { FiChevronDown } from 'react-icons/fi'
 import { cn } from '@shared/lib/utils'
+import { useState } from 'react'
 
 interface QnAItem {
   question: string
@@ -99,13 +98,16 @@ export const QnAList = () => {
               <span className="font-semibold text-lg text-text-primary">
                 {item.question}
               </span>
-              <FiChevronDown
+              <span
                 className={cn(
-                  'flex-shrink-0 text-gray-400 transition-transform duration-200',
-                  isOpen && 'transform rotate-180'
+                  'flex-shrink-0 font-mono text-2xl font-bold transition-all duration-300',
+                  isOpen
+                    ? 'text-primary'
+                    : 'text-primary/60 hover:text-primary'
                 )}
-                size={24}
-              />
+              >
+                {isOpen ? '{ }' : '{...}'}
+              </span>
             </button>
             {isOpen && (
               <div className="px-6 pb-5 pt-2 border-t border-border">
