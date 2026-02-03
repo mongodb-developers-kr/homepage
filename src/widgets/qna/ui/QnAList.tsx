@@ -72,7 +72,7 @@ const qnaData: QnAItem[] = [
 ]
 
 export const QnAList = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -103,7 +103,7 @@ export const QnAList = () => {
                   'flex-shrink-0 font-mono text-2xl font-bold transition-all duration-300',
                   isOpen
                     ? 'text-primary'
-                    : 'text-primary/60 hover:text-primary'
+                    : 'text-primary/60 hover:text-primary',
                 )}
               >
                 {isOpen ? '{ }' : '{...}'}
