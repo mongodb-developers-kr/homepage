@@ -1,5 +1,9 @@
 import type { Event } from '@entities/event'
-import { EventCategoryText, EventDescription, EventTypeText } from '@entities/event'
+import {
+  EventCategoryText,
+  EventDescription,
+  EventTypeText,
+} from '@entities/event'
 import { badgeStyles } from '@shared/lib/styles'
 import { cn } from '@shared/lib/utils'
 import { Button } from '@shared/ui/Button'
@@ -23,18 +27,19 @@ const events: Event[] = [
     id: 'mug-korea-seoul-2026-1',
     category: 'meetup',
     type: 'inPerson',
-    status: 'preparation',
-    statusText: EventDescription.preparation,
+    status: 'open',
+    statusText: EventDescription.open,
     time: '19:00 ~ 21:30',
-    description: `연사 및 세션을 최종 조율 중입니다. 
-    조금만 기다려주세요! 
-    곧 공개됩니다 🙂`,
-    title: 'MUG Seoul MeetUp #2 (공지 예정)',
+    description: `- 2026 MongoDB 최신 기술 동향
+    - 인덱스 & 쿼리 최적화 실전 지식 (Community Pick!)
+    - 데이터 마이그레이션 & RAG 구축 (실사용 사례)
+    - 네트워킹 & 커뮤니티 활동 기회`,
+    title: 'MUG Seoul MeetUp #2',
     date: '2026-02-26',
-    location: '서울 지역',
-    attendees: '000',
+    location: '서울 강남구 역삼동 629-1 인사이트 빌딩 지하1층',
+    attendees: '12',
     action: 'MeetUp 페이지 바로가기',
-    link: 'https://www.mongodb.com',
+    link: 'https://www.meetup.com/mongodb-usergroup-seoul/events/313060611/?eventOrigin=notifications&notificationId=%3Cinbox%3E%21477271970-1770083887463',
     createdAt: '2026-01-15',
     updatedAt: '2026-01-15',
   },
@@ -124,7 +129,7 @@ const events: Event[] = [
 /* 
 이벤트 섹션 카드 그리드를 생성하는 컴포넌트 입니다.
 모바일 카드 넓이를 100%로, 화면 위치는 웹과 다르게 가운데로 위치하도록 조정하는 방법을 찾는 중입니다.
-**/ 
+**/
 export const EventsGrid = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
@@ -246,31 +251,40 @@ export const EventsGrid = () => {
         >
           {event.statusText}
         </span>
-        <span className={cn(
-            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary' 
-
-          )}>{EventTypeText[event.type]}</span>
         <span
           className={cn(
-            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary' 
+            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary',
+          )}
+        >
+          {EventTypeText[event.type]}
+        </span>
+        <span
+          className={cn(
+            'text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary',
           )}
         >
           {EventCategoryText[event.category]}
         </span>
       </div>
-      <div className="mb-6 min-h-[72px] max-h-[72px] overflow-y-auto">
-        <h3 className="text-xl font-bold whitespace-pre-line leading-tight">{event.title}</h3>
+      <div className="mb-6 min-h-0 h-[72px] overflow-y-auto overflow-x-hidden">
+        <h3 className="text-xl font-bold whitespace-pre-line leading-tight">
+          {event.title}
+        </h3>
       </div>
-      <div className="mb-6 min-h-[120px] max-h-[120px] overflow-y-auto">
+      <div className="mb-6 min-h-0 h-[120px] overflow-y-auto overflow-x-hidden">
         <p className="text-gray-400 whitespace-pre-line">{event.description}</p>
       </div>
       <div className="space-y-3 mb-8 text-sm text-gray-400">
         <div className="flex items-center gap-2">
           <FiCalendar size={16} />
-          <span>{
-          new Date(event.date).toLocaleDateString('ko-KR', { 
-            year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' 
-            })}</span>
+          <span>
+            {new Date(event.date).toLocaleDateString('ko-KR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              weekday: 'long',
+            })}
+          </span>
         </div>
         <div className="flex items-center gap-2">
           <FiClock size={16} />
@@ -331,14 +345,15 @@ export const EventsGrid = () => {
     // 모바일에서는 카드 너비를 100%로 계산 (padding 제외 -> 조정 필요.)
     const padding = 48 // px-12 = 48px (좌우 각 24px)
     const availableWidth = containerWidth - padding
-    
+
     if (cardsPerView === 1) {
       // 모바일: 카드 너비 + gap만큼 이동
       const cardWidth = availableWidth
       return currentIndex * (cardWidth + MOBILE_GAP)
     } else {
       // 데스크톱/태블릿: 카드 너비 + gap만큼 이동
-      const cardWidth = (availableWidth - GAP * (cardsPerView - 1)) / cardsPerView
+      const cardWidth =
+        (availableWidth - GAP * (cardsPerView - 1)) / cardsPerView
       return currentIndex * (cardWidth + GAP)
     }
   }
@@ -386,8 +401,8 @@ export const EventsGrid = () => {
       >
         <div
           className={cn(
-            "flex transition-transform duration-300 ease-out",
-            cardsPerView === 1 ? "gap-4" : "gap-8"
+            'flex transition-transform duration-300 ease-out',
+            cardsPerView === 1 ? 'gap-4' : 'gap-8',
           )}
           style={{
             transform: `translateX(-${getTranslateX()}px)`,
@@ -398,9 +413,10 @@ export const EventsGrid = () => {
               key={event.id}
               className="flex-shrink-0"
               style={{
-                width: cardsPerView === 1 
-                  ? '100%' 
-                  : `calc((100% - ${(cardsPerView - 1) * GAP}px) / ${cardsPerView})`,
+                width:
+                  cardsPerView === 1
+                    ? '100%'
+                    : `calc((100% - ${(cardsPerView - 1) * GAP}px) / ${cardsPerView})`,
               }}
             >
               {renderEventCard(event)}
