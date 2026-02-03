@@ -46,7 +46,7 @@ export const groupsApi = {
           size: 20,
         }),
         buttonText:
-          apiGroup.status === 'active' ? 'Slack & MeetUp 참여하기' : undefined,
+          apiGroup.status === 'active' ? 'Slack 커뮤니티 참여하기' : undefined,
       }),
     )
   },

@@ -85,7 +85,7 @@ export const GroupsGrid = () => {
               }
             }}
           >
-            {group.buttonText || 'Slack & MeetUp 참여하기'}
+            {group.buttonText || 'Slack 커뮤니티 참여하기'}
           </Button>
         </Card>
       ))}
