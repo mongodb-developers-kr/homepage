@@ -65,14 +65,15 @@ const events: Event[] = [
     - 인덱스 & 쿼리 최적화 실전 지식 (Community Pick!)
     - 데이터 마이그레이션 & RAG 구축 (실사용 사례)
     - 네트워킹 & 커뮤니티 활동 기회`,
-    title: 'MUG Seoul MeetUp #2',
+    title: `Seoul MUG MeetUp #2
+    FEB 2026`,
     date: '2026-02-26',
     location: '서울 강남구 역삼동 629-1 인사이트 빌딩 지하1층',
     attendees: '00(모집 중)',
     action: 'MeetUp 페이지 바로가기',
     link: 'https://www.meetup.com/mongodb-usergroup-seoul/events/313060611/?eventOrigin=notifications&notificationId=%3Cinbox%3E%21477271970-1770083887463',
     createdAt: '2026-01-15',
-    updatedAt: '2026-01-15',
+    updatedAt: '2026-02-13',
   },
   {
     id: 'ai-skills-session-3',

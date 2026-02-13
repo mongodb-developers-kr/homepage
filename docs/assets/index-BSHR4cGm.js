@@ -23,7 +23,8 @@ Error generating stack: `+a.message+`
     (Skill Badge를 획득할 수 있어요!)`,date:"2026-03-05",location:"온라인",attendees:"00(모집 중)",action:"참여하기",link:"https://buildlearnworkshopserieskorea.splashthat.com/?utm_source=LINKEDIN&utm_medium=ORGANIC_SOCIAL_ADVOCACY",createdAt:"2026-02-12",updatedAt:"2026-02-12"},{id:"mug-korea-seoul-2026-1",category:"meetup",type:"inPerson",status:"open",statusText:Xa.open,time:"19:00 ~ 21:30",description:`- 2026 MongoDB 최신 기술 동향
     - 인덱스 & 쿼리 최적화 실전 지식 (Community Pick!)
     - 데이터 마이그레이션 & RAG 구축 (실사용 사례)
-    - 네트워킹 & 커뮤니티 활동 기회`,title:"MUG Seoul MeetUp #2",date:"2026-02-26",location:"서울 강남구 역삼동 629-1 인사이트 빌딩 지하1층",attendees:"00(모집 중)",action:"MeetUp 페이지 바로가기",link:"https://www.meetup.com/mongodb-usergroup-seoul/events/313060611/?eventOrigin=notifications&notificationId=%3Cinbox%3E%21477271970-1770083887463",createdAt:"2026-01-15",updatedAt:"2026-01-15"},{id:"ai-skills-session-3",category:"skillsSession",type:"online",status:"closed",statusText:Xa.closed,time:"09:00 ~ 12:00",description:`- AI 에이전트의 기본 개념 이해
+    - 네트워킹 & 커뮤니티 활동 기회`,title:`Seoul MUG MeetUp #2
+    FEB 2026`,date:"2026-02-26",location:"서울 강남구 역삼동 629-1 인사이트 빌딩 지하1층",attendees:"00(모집 중)",action:"MeetUp 페이지 바로가기",link:"https://www.meetup.com/mongodb-usergroup-seoul/events/313060611/?eventOrigin=notifications&notificationId=%3Cinbox%3E%21477271970-1770083887463",createdAt:"2026-01-15",updatedAt:"2026-02-13"},{id:"ai-skills-session-3",category:"skillsSession",type:"online",status:"closed",statusText:Xa.closed,time:"09:00 ~ 12:00",description:`- AI 에이전트의 기본 개념 이해
     - MongoDB를 활용한 AI 에이전트 상태 관리
     - 다양한 AI 에이전트 프레임워크 사용
     `,title:`MongoDB AI Skills Session #3: 
