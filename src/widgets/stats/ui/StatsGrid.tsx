@@ -11,7 +11,7 @@ const stats: Stat[] = [
   {
     id: 'events',
     icon: <FiCalendar className="text-primary" size={24} />,
-    value: 4,
+    value: 5,
     label: '이벤트',
   },
 ]
@@ -27,16 +27,23 @@ export const StatsGrid = () => {
             </div>
             <div className="text-xl font-bold mb-1">
               {stat.label === '회원' ? (
-                <span>{'{ 커뮤니티 멤버: '} {'{ \$gte: '}{stat.value}{' }'}{' }'} 
-                <div className="text-xs text-gray-400">
-                  <div className="flex items-center gap-2 justify-center mt-1">
-                    <FiInfo size={16} /> Slack & MeetUp 기준
+                <span>
+                  {'{ 커뮤니티 멤버: '} {'{ \$gte: '}
+                  {stat.value}
+                  {' }'}
+                  {' }'}
+                  <div className="text-xs text-gray-400">
+                    <div className="flex items-center gap-2 justify-center mt-1">
+                      <FiInfo size={16} /> Slack & MeetUp 기준
+                    </div>
                   </div>
-                </div>
                 </span>
-                
               ) : (
-                <span>{'{ 누적 이벤트: '}{stat.value}{' }'} <div className="text-sm text-gray-400">
+                <span>
+                  {'{ 누적 이벤트: '}
+                  {stat.value}
+                  {' }'}{' '}
+                  <div className="text-sm text-gray-400">
                     <div className="flex items-center gap-2 justify-center mt-1">
                       <FiInfo size={16} /> 공식 밋업 & 기술 세션
                     </div>
