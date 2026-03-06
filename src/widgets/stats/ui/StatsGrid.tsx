@@ -11,7 +11,7 @@ const stats: Stat[] = [
   {
     id: 'events',
     icon: <FiCalendar className="text-primary" size={24} />,
-    value: 5,
+    value: 6,
     label: '이벤트',
   },
 ]
