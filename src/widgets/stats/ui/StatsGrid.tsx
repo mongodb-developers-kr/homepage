@@ -5,7 +5,7 @@ const stats: Stat[] = [
   {
     id: 'members',
     icon: <FiUsers className="text-primary" size={24} />,
-    value: 200,
+    value: 270,
     label: '회원',
   },
   {
