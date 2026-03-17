@@ -1,3 +1,4 @@
+import cryCheeseBurgerLogo from '@assets/images/partners/cry-cheese-burger-logo.png'
 import iinweLogo from '@assets/images/partners/iinwe-logo.png'
 import mongodbLogo from '@assets/images/partners/mongodb-logo.png'
 import type { Partner } from '@entities/partner'
@@ -16,6 +17,13 @@ const partners: Partner[] = [
     logo: iinweLogo,
     imgUrl: iinweLogo,
     lastUpdated: '2026-01-14',
+  },
+  {
+    id: 'cry-cheese-burger',
+    name: 'Cry Cheese Burger',
+    logo: cryCheeseBurgerLogo,
+    imgUrl: cryCheeseBurgerLogo,
+    lastUpdated: '2026-03-17',
   },
 ]
 
