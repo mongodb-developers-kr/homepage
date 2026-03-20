@@ -32,13 +32,11 @@ const events: Event[] = [
     time: '14:00 ~ 16:00',
     description: `Aggregation Framework (3/18 , 수요일)
       → 복잡한 데이터 처리, Pipeline로 해결하기`,
-    title: `Build & Learn Workshop Series Korea #3:
-    실습 중심 3주 연속 온라인 시리즈
-    (Skill Badge를 획득할 수 있어요!)
-    `,
+    title: `Build & Learn Workshop Series Korea 
+    #3: Aggregation Framework`,
     date: '2026-03-18',
     location: 'Online',
-    attendees: '30',
+    attendees: '36',
     action: 'MongoDB University 강의 보기',
     link: 'https://learn.mongodb.com/courses/fundamentals-of-data-transformation',
     createdAt: '2026-02-12',
@@ -51,21 +49,17 @@ const events: Event[] = [
     status: 'closed',
     statusText: EventDescription.closed,
     time: '14:00 ~ 16:00',
-    description: `
-    스키마 설계 패턴과 안티패턴 (3/11 , 수요일)
-      → Extended Reference
-      → Computed 
-      → Inheritance
-      → 꼭 피해야할 안티패턴
+    description: `- Extended Reference
+      - Computed 
+      - Inheritance
+      - 꼭 피해야할 안티패턴
 
     `,
-    title: `Build & Learn Workshop Series Korea #2:
-    실습 중심 3주 연속 온라인 시리즈
-    (Skill Badge를 획득할 수 있어요!)
-    `,
+    title: `Build & Learn Workshop Series Korea 
+    #2: Schema Design Patterns and Antipatterns`,
     date: '2026-03-11',
     location: 'Online',
-    attendees: '30',
+    attendees: '50',
     action: 'MongoDB University 강의 보기',
     link: 'https://learn.mongodb.com/courses/schema-design-patterns-and-antipatterns?sessionFields=%5B%5B%22learning-method%22%2C%22Skill%22%5D%5D',
     createdAt: '2026-02-12',
@@ -78,13 +72,11 @@ const events: Event[] = [
     status: 'closed',
     statusText: EventDescription.closed,
     time: '14:00 ~ 16:00',
-    description: `데이터 모델링:
-      → Document Model 설계 
-      → Embedding vs Referencing
-      → Schema Validation 실습`,
-    title: `Build & Learn Workshop Series Korea #1:
-    실습 중심 3주 연속 온라인 시리즈
-    (Skill Badge를 획득할 수 있어요!)`,
+    description: `- Document Model 설계 
+      - Embedding vs Referencing
+      - Schema Validation 실습`,
+    title: `Build & Learn Workshop Series Korea 
+    #1: Data Modeling`,
     date: '2026-03-05',
     location: '온라인',
     attendees: '120',
