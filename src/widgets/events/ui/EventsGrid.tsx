@@ -27,30 +27,69 @@ const events: Event[] = [
     id: 'workshop-series',
     category: 'skillsSession',
     type: 'online',
-    status: 'open',
-    statusText: EventDescription.open,
+    status: 'closed',
+    statusText: EventDescription.closed,
     time: '14:00 ~ 16:00',
-    description: `1. 데이터 모델링 (3/5 , 목요일)
-      → Document Model 설계 
-      → Embedding vs Referencing
-      → Schema Validation 실습
-
-    2. 스키마 설계 패턴과 안티패턴 (3/11 , 수요일)
+    description: `Aggregation Framework (3/18 , 수요일)
+      → 복잡한 데이터 처리, Pipeline로 해결하기`,
+    title: `Build & Learn Workshop Series Korea #3:
+    실습 중심 3주 연속 온라인 시리즈
+    (Skill Badge를 획득할 수 있어요!)
+    `,
+    date: '2026-03-18',
+    location: 'Online',
+    attendees: '30',
+    action: 'MongoDB University 강의 보기',
+    link: 'https://learn.mongodb.com/courses/fundamentals-of-data-transformation',
+    createdAt: '2026-02-12',
+    updatedAt: '2026-02-12',
+  },
+  {
+    id: 'workshop-series',
+    category: 'skillsSession',
+    type: 'online',
+    status: 'closed',
+    statusText: EventDescription.closed,
+    time: '14:00 ~ 16:00',
+    description: `
+    스키마 설계 패턴과 안티패턴 (3/11 , 수요일)
       → Extended Reference
       → Computed 
       → Inheritance
       → 꼭 피해야할 안티패턴
 
-    3. Aggregation Framework (3/18 , 수요일)
-      → 복잡한 데이터 처리, Pipeline로 해결하기`,
-    title: `Build & Learn Workshop Series Korea:
+    `,
+    title: `Build & Learn Workshop Series Korea #2:
+    실습 중심 3주 연속 온라인 시리즈
+    (Skill Badge를 획득할 수 있어요!)
+    `,
+    date: '2026-03-11',
+    location: 'Online',
+    attendees: '30',
+    action: 'MongoDB University 강의 보기',
+    link: 'https://learn.mongodb.com/courses/schema-design-patterns-and-antipatterns?sessionFields=%5B%5B%22learning-method%22%2C%22Skill%22%5D%5D',
+    createdAt: '2026-02-12',
+    updatedAt: '2026-02-12',
+  },
+  {
+    id: 'workshop-series',
+    category: 'skillsSession',
+    type: 'online',
+    status: 'closed',
+    statusText: EventDescription.closed,
+    time: '14:00 ~ 16:00',
+    description: `데이터 모델링:
+      → Document Model 설계 
+      → Embedding vs Referencing
+      → Schema Validation 실습`,
+    title: `Build & Learn Workshop Series Korea #1:
     실습 중심 3주 연속 온라인 시리즈
     (Skill Badge를 획득할 수 있어요!)`,
     date: '2026-03-05',
     location: '온라인',
-    attendees: '00(모집 중)',
-    action: '참여하기',
-    link: 'https://buildlearnworkshopserieskorea.splashthat.com/?utm_source=LINKEDIN&utm_medium=ORGANIC_SOCIAL_ADVOCACY',
+    attendees: '120',
+    action: 'MongoDB University 강의 보기',
+    link: 'https://learn.mongodb.com/courses/relational-to-document-model',
     createdAt: '2026-02-12',
     updatedAt: '2026-02-12',
   },
