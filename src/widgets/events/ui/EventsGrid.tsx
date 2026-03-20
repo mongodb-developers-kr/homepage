@@ -30,8 +30,12 @@ const events: Event[] = [
     status: 'closed',
     statusText: EventDescription.closed,
     time: '14:00 ~ 16:00',
-    description: `Aggregation Framework (3/18 , 수요일)
-      → 복잡한 데이터 처리, Pipeline로 해결하기`,
+    description: `Aggregation Framework 
+      - 복잡한 데이터 처리, Pipeline로 해결하기
+      - 일반 조회와 Aggregation Framework의 차이점 이해
+      - Group, Sorting & Limiting 실습
+      - Join, Unwind, Lookup 실습
+      `,
     title: `Build & Learn Workshop Series Korea 
     #3: Aggregation Framework`,
     date: '2026-03-18',
