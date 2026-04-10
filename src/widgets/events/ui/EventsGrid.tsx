@@ -24,6 +24,26 @@ import {
  */
 const events: Event[] = [
   {
+    id: 'mug-korea-seoul-2026-2',
+    category: 'meetup',
+    type: 'inPerson',
+    status: 'open',
+    statusText: EventDescription.open,
+    time: '19:00 ~ 21:30',
+    description: `- MongoDB Replication Set & Sharding (커뮤니티 픽!)
+    - CDC 를 통한 이벤트 기반 데이터 연동시 Read 시점의 일관성 처리 (실사용 사례)
+    - 네트워킹 & 커뮤니티 활동 기회`,
+    title: `Seoul MUG MeetUp #3
+    APR 2026`,
+    date: '2026-04-30',
+    location: '서울 강남구 테헤란로1길 10 세경빌딩 6층',
+    attendees: '00 (모집 중)',
+    action: 'MeetUp 페이지 바로가기',
+    link: 'https://www.meetup.com/mongodb-usergroup-seoul/events/314210138/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=477271970',
+    createdAt: '2026-04-10',
+    updatedAt: '2026-04-10',
+  },
+  {
     id: 'workshop-series',
     category: 'skillsSession',
     type: 'online',
