@@ -27,8 +27,8 @@ const events: Event[] = [
     id: 'mug-korea-seoul-2026-2',
     category: 'meetup',
     type: 'inPerson',
-    status: 'open',
-    statusText: EventDescription.open,
+    status: 'closed',
+    statusText: EventDescription.closed,
     time: '19:00 ~ 21:30',
     description: `- MongoDB Replication Set & Sharding (커뮤니티 픽!)
     - CDC 를 통한 이벤트 기반 데이터 연동시 Read 시점의 일관성 처리 (실사용 사례)
