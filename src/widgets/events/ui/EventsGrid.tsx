@@ -29,7 +29,7 @@ const events: Event[] = [
     type: "inPerson",
     status: "open",
     statusText: EventDescription.open,
-    time: "19:00 ~ 21:30",
+    time: "12:00 ~ 14:30",
     description: `- MongoDB User Group Seoul Meetup #4, JUN 2026
 - MongoDB로 구현하는 AI Agent Memory
 - 메모리 유형(에피소드·시맨틱·절차 메모리 등), 효율적인 저장 패턴
@@ -38,7 +38,7 @@ const events: Event[] = [
     JUN 2026: 
     MongoDB로 Agent의 기억을 구현하기`,
     date: "2026-06-23",
-    location: "서울 강남구 테헤란로1길 10 세경빌딩 6층",
+    location: "서울 강남구 봉은사로 16길 28 3층",
     attendees: "00 (모집 중)",
     action: "MeetUp 페이지 바로가기",
     link: "https://www.meetup.com/mongodb-usergroup-seoul/events/314977330  ",
@@ -60,7 +60,7 @@ const events: Event[] = [
     title: `[MUG Seoul x GDG Korea] 하루 만에 끝내는 로컬 RAG 프로토타이핑
     JUN 2026: MongoDB로 구현하는 AI Agent Memory`,
     date: "2026-06-23",
-    location: "서울 강남구 테헤란로1길 10 세경빌딩 6층",
+    location: "구글 스타트업 캠퍼스 서울 (오토웨이 타워 지하 1 층)",
     attendees: "45",
     action: "MeetUp 페이지 바로가기",
     link: "https://www.meetup.com/mongodb-usergroup-seoul/events/314765122  ",
