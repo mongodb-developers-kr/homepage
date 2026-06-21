@@ -27,8 +27,8 @@ const events: Event[] = [
     id: "mug-korea-seoul-2026-6",
     category: "meetup",
     type: "inPerson",
-    status: "open",
-    statusText: EventDescription.open,
+    status: "closed",
+    statusText: EventDescription.closed,
     time: "12:00 ~ 14:30",
     description: `- MongoDB User Group Seoul Meetup #4, JUN 2026
 - MongoDB로 구현하는 AI Agent Memory
@@ -39,7 +39,7 @@ const events: Event[] = [
     MongoDB로 Agent의 기억을 구현하기`,
     date: "2026-06-23",
     location: "서울 강남구 봉은사로 16길 28 3층",
-    attendees: "00 (모집 중)",
+    attendees: "14",
     action: "MeetUp 페이지 바로가기",
     link: "https://www.meetup.com/mongodb-usergroup-seoul/events/314977330  ",
     createdAt: "2026-06-12",
