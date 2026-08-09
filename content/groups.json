@@ -1,0 +1,11 @@
+[
+  {
+    "id": "seoul",
+    "title": "서울",
+    "type": "regional",
+    "status": "active",
+    "description": "서울 지역에서 정기 밋업과 기술 세션을 진행하는 모임입니다. Meetup 그룹에서 다음 일정을 확인할 수 있습니다.",
+    "link": "https://www.meetup.com/mongodb-usergroup-seoul/",
+    "linkLabel": "Meetup 그룹 보기"
+  }
+]

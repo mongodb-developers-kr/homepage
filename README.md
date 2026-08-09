@@ -1,144 +1,159 @@
-# MongoDB 한국 개발자 모임 (MongoDB Developers KR) 홈페이지 (Draft)
+# MongoDB 한국 개발자 모임 (MongoDB Developers KR) 홈페이지
 
-MongoDB 한국 개발자 모임의 공식 홈페이지(Draft)입니다.
+MongoDB 한국 개발자 모임의 공식 홈페이지입니다.
 
-- 현재는 가안(Draft)만 생성된 상태로, 프로젝트 구성 규칙, 활용 라이브러리, 사용성은 향후 참여자 분들의 활동이 반영되면 변경될 수 있음을 알려드립니다.
+- 아직 다듬어가는 중인 프로젝트입니다. 프로젝트 구성 규칙, 활용 라이브러리, 사용성은 참여자 분들의 의견이 반영되면서 계속 바뀔 수 있습니다.
 
-## 페이지 미리보기
+## 콘텐츠 수정하기 (React 를 몰라도 됩니다)
+
+화면에 보이는 이벤트, 모임, Q&A, 파트너 정보는 모두 `content/` 폴더의 JSON 파일에 들어 있습니다.
+화면 코드를 건드리지 않고 이 파일만 고쳐서 Pull Request 를 보내면 됩니다.
+
+| 파일                    | 담는 내용                                    |
+| ----------------------- | -------------------------------------------- |
+| `content/site.json`     | 커뮤니티 이름, 멤버 수, 모든 외부 링크(Slack·폼·GitHub) |
+| `content/events.json`   | 밋업 · 기술 세션 목록                        |
+| `content/groups.json`   | 지역·주제별 모임 목록                        |
+| `content/qna.json`      | 자주 묻는 질문                               |
+| `content/partners.json` | 협업 · 후원 파트너                           |
+
+각 파일의 형식은 `src/shared/content/schema.ts` 에 정의되어 있습니다.
+형식이 맞지 않으면 **빌드가 실패하면서 어디가 잘못됐는지 알려줍니다.**
+
+```
+content/events.json 검증 실패
+  - 0.date: YYYY-MM-DD 형식이어야 합니다
+  - 1.linkLabel: link 가 있으면 linkLabel 도 있어야 합니다
+```
+
+### 이벤트 하나 추가하기
+
+`content/events.json` 배열 맨 앞에 항목을 추가합니다.
+
+```json
+{
+  "id": "mug-korea-seoul-2026-09",
+  "category": "meetup",
+  "type": "inPerson",
+  "status": "open",
+  "title": "Seoul MUG MeetUp #5",
+  "date": "2026-09-24",
+  "time": "19:00 ~ 21:30",
+  "location": "서울 강남구",
+  "description": ["다룰 주제를 한 줄에 하나씩 적어주세요"],
+  "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/000000000",
+  "linkLabel": "Meetup 페이지 열기",
+  "createdAt": "2026-08-09",
+  "updatedAt": "2026-08-09"
+}
+```
+
+- `status` 가 `open` 또는 `preparation` 이면 첫 화면 상단에 "다음 밋업"으로 노출됩니다.
+- `linkLabel` 은 버튼에 그대로 찍히는 문구입니다. 어디로 가는 버튼인지 드러나게 적어주세요.
+- 파트너 로고 이미지는 `public/partners/` 에 넣고 `content/partners.json` 에서 `partners/파일명.png` 로 참조합니다.
+
+## 페이지 구성
 
 ### 1. 헤더 및 히어로 섹션
 
 ![메인 페이지 1](./images/main-1.png)
 
-- **고정 헤더**: MongoDB 한국 개발자 모임 로고와 네비게이션 메뉴
-- **히어로 섹션**: MongoDB 한국 개발자 모임 소개 및 Slack 채널 참여 버튼
-- **통계 섹션**: 회원 수 및 이벤트 정보
+- **고정 헤더**: 로고와 네비게이션 (모바일에서는 햄버거 메뉴)
+- **히어로 섹션**: 커뮤니티 소개, Slack 워크스페이스 가입 버튼, 다음 밋업 안내
+- **통계 섹션**: 커뮤니티 멤버 수와 누적 이벤트 수
 
 ### 2. 모임 및 그룹 섹션
 
 ![메인 페이지 2](./images/main-2.png)
 
-- **모임 섹션**: 지역별 모임 정보 (현재 서울 지역 모임 운영 중)
-- 각 모임의 설명과 참여 인원 정보 제공
+- 지역별 모임 정보 (현재 서울 지역 모임 운영 중)
 
 ### 3. 이벤트 섹션
 
 ![메인 페이지 3](./images/main-3.png)
 
-- **이벤트 목록**: 다가오는 이벤트와 지난 이벤트 정보
-- 각 이벤트의 날짜, 장소, 참여 인원 정보 제공
-- MongoDB University 링크 제공
+- 밋업 · 기술 세션 목록과 발표 제안 창구
 
 ### 4. Q&A 섹션
 
 ![메인 페이지 4](./images/main-4.png)
-- MongoDB Developers KR 에 대한 주요 질문들의 답변 소개
-- 질문하기
-  - Google Link
-  - Slack Link
+
+- 자주 묻는 질문과 질문 창구 (폼 / Slack 채널)
 
 ### 5. 파트너 및 푸터 섹션
 
-![메인 페이지 4](./images/main-5.png)
+![메인 페이지 5](./images/main-5.png)
 
-- **파트너 & 스폰서**: 커뮤니티를 지원하는 파트너사 소개 (예시)
-- **푸터**:
-  - Disclaimer: 커뮤니티 독립성 및 행동 강령 안내 (예시)
-  - Resources: 문서, 튜토리얼, 블로그, 뉴스레터 링크 (예시)
-  - Connect: GitHub Slack 등 소셜 미디어 링크 (예시)
-    공
+- 협업 · 후원 파트너, Disclaimer, Resources, Connect
 
 ## 기술 스택
-
-> (스타일링, 아이콘 등에 사용되는 라이브러리는 변경될 수 있습니다.)
 
 - **프레임워크**: React 19
 - **빌드 도구**: Vite
 - **스타일링**: Tailwind CSS
-- **아이콘**: Lucide React
+- **아이콘**: React Icons
+- **콘텐츠 검증**: Zod (빌드 타임)
 - **아키텍처**: Feature-Sliced Design (FSD)
 - **패키지 매니저**: pnpm
 
 ## 프로젝트 구조
 
-(앞으로 변경될 수 있습니다.)
-
 ```
+content/              # 화면에 보이는 콘텐츠 (JSON)
+public/               # 정적 파일 (파트너 로고, OG 이미지, 파비콘)
+scripts/
+└── validate-content.ts  # 빌드 시 content/ 를 스키마로 검증
 src/
 ├── app/              # 앱 설정 및 전역 스타일
-├── pages/            # 페이지 컴포넌트
-│   └── landing/      # 랜딩 페이지
-├── widgets/          # 독립적인 UI 블록
-│   ├── header/       # 헤더 위젯
-│   ├── hero/         # 히어로 섹션
-│   ├── stats/        # 통계 섹션
-│   ├── groups/       # 모임 섹션
-│   ├── events/       # 이벤트 섹션
-│   ├── qna/       # 이벤트 섹션
-│   ├── partners/     # 파트너 섹션
-│   └── footer/       # 푸터
-├── shared/           # 공통 컴포넌트 및 유틸리티
-│   ├── ui/           # UI 컴포넌트 (Button, Card 등)
-│   └── lib/          # 유틸리티 함수
-└── main.tsx          # 앱 진입점
+├── pages/landing/    # 랜딩 페이지
+├── widgets/          # 독립적인 UI 블록 (header, hero, stats, groups, events, qna, partners, footer)
+├── entities/         # 도메인 모델과 표시용 라벨
+├── shared/
+│   ├── content/      # content/ 로더와 스키마 정의
+│   ├── ui/           # 공통 UI 컴포넌트 (Button, Card)
+│   └── lib/          # 유틸리티, 스타일 토큰, API 클라이언트
+└── main.tsx
 ```
 
 ## 시작하기
 
-### 설치
-
 ```bash
 pnpm install
+pnpm dev      # http://localhost:5173
+pnpm build    # content/ 검증 후 docs/ 에 빌드
+pnpm lint
 ```
 
-### 개발 서버 실행
+`homepage-api` 없이도 동작합니다. 모임 목록은 `content/groups.json` 으로 먼저 그려지고,
+API 응답이 성공했을 때만 최신 데이터로 교체됩니다.
 
-```bash
-pnpm dev
+### 환경 변수
+
+```
+VITE_CACHE_API=https://api.mugkrapi.work
 ```
 
-개발 서버가 실행되면 브라우저에서 `http://localhost:5173`으로 접속할 수 있습니다.
+## 기여하기
 
-### 빌드
-
-```bash
-pnpm build
-```
-
-### 미리보기
-
-```bash
-pnpm preview
-```
-
-## 주요 기능 (구상중, Draft 버전에서 고려한 내용만 포함하고 있습니다.)
-
-- 반응형 디자인 (모바일, 태블릿, 데스크탑 지원)
-- 다크 테마 기반 UI
-- MongoDB 브랜드 컬러 적용
-- 소셜 미디어 링크 통합
-- 이벤트 정보 관리
-- 모임 및 그룹 정보 제공
-
-## 🤝 기여하기
-
-MongoDB 한국 개발자 모임은 오픈소스 커뮤니티입니다. 기여를 환영합니다!
+MongoDB 한국 개발자 모임은 오픈소스 커뮤니티입니다. 기여를 환영합니다.
 
 1. 이 저장소를 포크하세요
 2. 새로운 기능 브랜치를 생성하세요 (`git checkout -b feature/AmazingFeature`)
 3. 변경사항을 커밋하세요 (`git commit -m 'Add some AmazingFeature'`)
 4. 브랜치에 푸시하세요 (`git push origin feature/AmazingFeature`)
-5. Pull Request를 열어주세요
+5. Pull Request 를 열어주세요
 
-## 📄 라이선스
+콘텐츠만 고치는 PR 도 똑같이 환영합니다. 오탈자 수정, 이벤트 추가, Q&A 보완 모두 좋습니다.
+
+## 라이선스
 
 이 프로젝트는 MongoDB 한국 개발자 모임의 독립적인 커뮤니티 프로젝트입니다.
 
-## 🔗 링크
+## 링크
 
-- **GitHub Organization**: [https://github.com/MongoDB Developers KRkr/homepage](https://github.com/mongodb-developers-kr)
-- **MongoDB Community Code of Conduct**: [https://www.mongodb.com/community-code-of-conduct](https://www.mongodb.com/community-code-of-conduct)
+- **GitHub Organization**: https://github.com/mongodb-developers-kr
+- **MongoDB Community Code of Conduct**: https://www.mongodb.com/community-code-of-conduct
 
 ---
 
-© 2026 MongoDB Korea Usergroup - MongoDB Developers KR Korea. All Rights Reserved.
+© 2026 MongoDB Developers KR. All Rights Reserved.

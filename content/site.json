@@ -1,0 +1,28 @@
+{
+  "name": "MongoDB Developers KR",
+  "tagline": "MongoDB 한국 개발자 모임",
+  "description": "MongoDB를 사용하며 고민했던 경험, 배운 것, 시행착오를 개발자들끼리 편하게 나누는 커뮤니티입니다.",
+  "url": "https://mongodb-developers-kr.github.io/homepage/",
+  "memberCount": 418,
+  "memberCountNote": "Slack & MeetUp 기준",
+  "links": {
+    "slackJoin": "https://mdb.link/mongodevkr",
+    "slackGeneral": "https://mongodevkr.slack.com/archives/C09J83YK45P",
+    "slackQuestions": "https://mongodevkr.slack.com/archives/C09HUNQ5P0S",
+    "github": "https://github.com/mongodb-developers-kr/homepage",
+    "speakerForm": "https://docs.google.com/forms/d/e/1FAIpQLSdLIyRzgC8heWOZZk8fEOsHkBVi6ys5CPLxedrcuStbs10igQ/viewform",
+    "questionForm": "https://docs.google.com/forms/d/e/1FAIpQLScqHhLlPpEIwumvRaIGapwnVNjCohjngWKKxkzJnTjProxYSg/viewform",
+    "partnershipForm": "https://docs.google.com/forms/d/e/1FAIpQLScLVinaWgowylJpWEgIeOYkrk2BQlETPzNdu7x1iyrHoUqL2w/viewform",
+    "codeOfConduct": "https://www.mongodb.com/community-code-of-conduct"
+  },
+  "resources": [
+    {
+      "label": "MongoDB 공식 문서",
+      "href": "https://www.mongodb.com/docs/"
+    },
+    {
+      "label": "MongoDB 학습하기 & Skill Badges",
+      "href": "https://learn.mongodb.com/"
+    }
+  ]
+}

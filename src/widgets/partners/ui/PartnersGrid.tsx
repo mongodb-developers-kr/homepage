@@ -1,43 +1,17 @@
-import cryCheeseBurgerLogo from '@assets/images/partners/cry-cheese-burger-logo.png'
-import iinweLogo from '@assets/images/partners/iinwe-logo.png'
-import mongodbLogo from '@assets/images/partners/mongodb-logo.png'
-import type { Partner } from '@entities/partner'
-
-const partners: Partner[] = [
-  {
-    id: 'mongodb',
-    name: 'MongoDB Korea',
-    logo: mongodbLogo,
-    imgUrl: mongodbLogo,
-    lastUpdated: '2026-01-14',
-  },
-  {
-    id: 'iinwe-partners',
-    name: 'I in We',
-    logo: iinweLogo,
-    imgUrl: iinweLogo,
-    lastUpdated: '2026-01-14',
-  },
-  {
-    id: 'cry-cheese-burger',
-    name: 'Cry Cheese Burger',
-    logo: cryCheeseBurgerLogo,
-    imgUrl: cryCheeseBurgerLogo,
-    lastUpdated: '2026-03-17',
-  },
-]
+import { asset, partners } from '@shared/content'
 
 export const PartnersGrid = () => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center items-center">
-      {partners.map((partner: Partner) => (
+      {partners.map((partner) => (
         <div
           key={partner.id}
           className="h-16 flex items-center justify-center bg-bg-tertiary text-text-primary rounded-lg font-medium text-sm px-4"
         >
           <img
-            src={partner.imgUrl}
+            src={asset(partner.logo)}
             alt={partner.name}
+            loading="lazy"
             className="w-full h-full object-contain max-w-32 max-h-16"
           />
         </div>

@@ -1,53 +1,39 @@
 import type { Group } from '@entities/group'
 import { cacheClient } from '@shared/lib/api/cacheClient'
-import { createElement } from 'react'
-import { FiMapPin, FiUser } from 'react-icons/fi'
 
 /**
- * API 응답 타입 (서버에서 받는 원본 형식)
+ * API 응답 타입 (Cloudflare KV 가 내려주는 원본 형식)
  */
 type GroupApiResponse = {
-  id: number
+  id: number | string
   title: string
   description: string
-  membersCount: number
-  type: 'regional' | 'special'
-  status: 'active' | 'inactive' | 'closed'
+  membersCount?: number
+  type: Group['type']
+  status: Group['status']
   link?: string | null
-  createdAt: string
-  updatedAt: string
+  linkLabel?: string | null
 }
 
-/**
- * Groups API 엔드포인트
- */
 export const groupsApi = {
   /**
-   * 모든 그룹 목록을 가져옵니다.
+   * 모임 목록을 가져옵니다.
    *
-   * @returns Promise<Group[]> - 그룹 배열
+   * 화면은 content/groups.json 으로 먼저 그려지고,
+   * 이 호출이 성공했을 때만 최신 데이터로 교체됩니다.
    */
   getAll: async (): Promise<Group[]> => {
-    // API 응답은 이미 JSON 배열이므로 직접 받습니다
     const apiGroups = await cacheClient.get<GroupApiResponse[]>('groups')
 
-    return apiGroups.map(
-      (apiGroup): Group => ({
-        id: String(apiGroup.id),
-        title: apiGroup.title,
-        description: apiGroup.description,
-        membersCount: apiGroup.membersCount,
-        type: apiGroup.type,
-        status: apiGroup.status,
-        createdAt: apiGroup.createdAt,
-        updatedAt: apiGroup.updatedAt,
-        link: apiGroup.link || undefined,
-        icon: createElement(apiGroup.type === 'regional' ? FiMapPin : FiUser, {
-          size: 20,
-        }),
-        buttonText:
-          apiGroup.status === 'active' ? 'Slack 커뮤니티 참여하기' : undefined,
-      }),
-    )
+    return apiGroups.map((apiGroup) => ({
+      id: String(apiGroup.id),
+      title: apiGroup.title,
+      description: apiGroup.description,
+      type: apiGroup.type,
+      status: apiGroup.status,
+      membersCount: apiGroup.membersCount,
+      link: apiGroup.link || undefined,
+      linkLabel: apiGroup.linkLabel || undefined,
+    }))
   },
 }

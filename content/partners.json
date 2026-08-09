@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mongodb-korea",
+    "name": "MongoDB Korea",
+    "logo": "partners/mongodb-logo.png",
+    "updatedAt": "2026-01-14"
+  },
+  {
+    "id": "iinwe-partners",
+    "name": "I in We",
+    "logo": "partners/iinwe-logo.png",
+    "updatedAt": "2026-01-14"
+  },
+  {
+    "id": "cry-cheese-burger",
+    "name": "Cry Cheese Burger",
+    "logo": "partners/cry-cheese-burger-logo.png",
+    "updatedAt": "2026-03-17"
+  }
+]

@@ -11,6 +11,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -24,7 +25,8 @@
       "@features/*": ["./src/features/*"],
       "@entities/*": ["./src/entities/*"],
       "@shared/*": ["./src/shared/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@content/*": ["./content/*"]
     },
 
     /* Linting */

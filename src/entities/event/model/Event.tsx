@@ -1,34 +1,15 @@
-export type Event = {
-  id: string
-  category: EventCategory
-  type: EventType
-  status: EventStatus
-  statusText: (typeof EventDescription)[EventStatus]
-  title: string
-  date: string
-  time: string
-  location: string
-  description: string
-  attendees: string
-  action: action
-  link: string
-  createdAt: string,
-  updatedAt: string,
-}
+import type { EventContent } from '@shared/content/schema'
 
-export type EventStatus = 'preparation' | 'open' | 'closed'
+export type Event = EventContent
+export type EventStatus = Event['status']
+export type EventCategory = Event['category']
+export type EventType = Event['type']
+
 export const EventDescription: Record<EventStatus, string> = {
   preparation: '준비중',
   open: '다가오는 이벤트',
   closed: '지난 이벤트',
 }
-export type action = 
-| 'MeetUp 페이지 바로가기' 
-| 'MongoDB University 강의 보기' 
-| '후기 보기 (Slack)' 
-| '참여하기'
-export type EventCategory = 'meetup' | 'skillsSession'| 'ama' | 'other' 
-export type EventType = 'inPerson' | 'online' | 'hybrid'
 
 export const EventTypeText: Record<EventType, string> = {
   inPerson: '오프라인',

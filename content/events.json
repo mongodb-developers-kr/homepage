@@ -1,0 +1,227 @@
+[
+  {
+    "id": "mug-korea-seoul-2026-6",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "closed",
+    "title": "Seoul MUG MeetUp #4 — MongoDB로 Agent의 기억을 구현하기",
+    "date": "2026-06-23",
+    "time": "12:00 ~ 14:30",
+    "location": "서울 강남구 봉은사로 16길 28 3층",
+    "description": [
+      "MongoDB User Group Seoul Meetup #4, JUN 2026",
+      "MongoDB로 구현하는 AI Agent Memory",
+      "메모리 유형(에피소드·시맨틱·절차 메모리 등), 효율적인 저장 패턴",
+      "벡터 및 메타데이터를 결합한 Retrieval 전략"
+    ],
+    "attendees": 24,
+    "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/314977330",
+    "linkLabel": "Meetup 페이지 열기",
+    "createdAt": "2026-06-12",
+    "updatedAt": "2026-06-12"
+  },
+  {
+    "id": "mug-korea-seoul-gdg-2026-6",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "closed",
+    "title": "[MUG Seoul x GDG Korea] 하루 만에 끝내는 로컬 RAG 프로토타이핑",
+    "date": "2026-05-29",
+    "time": "19:00 ~ 21:30",
+    "location": "구글 스타트업 캠퍼스 서울 (오토웨이 타워 지하 1층)",
+    "description": [
+      "최신 Gemma 모델과 Voyage AI, MongoDB로 완성하는 Full 로컬 RAG",
+      "MUG Seoul과 GDG Korea가 함께하는 커뮤니티 이벤트로, 두 생태계가 만나 각 기술이 어떻게 연결되고 서로를 보완하는지 탐색합니다",
+      "클라우드 배포에 앞서 로컬 환경에서 빠르게 RAG 시스템을 프로토타이핑해 보고 싶은 개발자를 위한 핸즈온 세션입니다",
+      "Gemma 4, voyage-4-nano 임베딩, MongoDB를 활용해 처음부터 끝까지 로컬에서 동작하는 RAG 파이프라인을 직접 구축합니다"
+    ],
+    "attendees": 45,
+    "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/314765122",
+    "linkLabel": "Meetup 페이지 열기",
+    "createdAt": "2026-06-12",
+    "updatedAt": "2026-06-12"
+  },
+  {
+    "id": "mug-korea-seoul-2026-2",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "closed",
+    "title": "Seoul MUG MeetUp #3 — APR 2026",
+    "date": "2026-04-30",
+    "time": "19:00 ~ 21:30",
+    "location": "서울 강남구 테헤란로1길 10 세경빌딩 6층",
+    "description": [
+      "MongoDB Replication Set & Sharding (커뮤니티 픽!)",
+      "CDC를 통한 이벤트 기반 데이터 연동 시 Read 시점의 일관성 처리 (실사용 사례)",
+      "네트워킹 & 커뮤니티 활동 기회"
+    ],
+    "attendees": 28,
+    "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/314210138/",
+    "linkLabel": "Meetup 페이지 열기",
+    "createdAt": "2026-04-10",
+    "updatedAt": "2026-04-10"
+  },
+  {
+    "id": "workshop-series-3",
+    "category": "skillsSession",
+    "type": "online",
+    "status": "closed",
+    "title": "Build & Learn Workshop Series Korea #3 — Aggregation Framework",
+    "date": "2026-03-18",
+    "time": "14:00 ~ 16:00",
+    "location": "온라인",
+    "description": [
+      "복잡한 데이터 처리, Pipeline로 해결하기",
+      "일반 조회와 Aggregation Framework의 차이점 이해",
+      "Group, Sorting & Limiting 실습",
+      "Join, Unwind, Lookup 실습"
+    ],
+    "attendees": 36,
+    "link": "https://learn.mongodb.com/courses/fundamentals-of-data-transformation",
+    "linkLabel": "MongoDB University 강의 보기",
+    "createdAt": "2026-02-12",
+    "updatedAt": "2026-02-12"
+  },
+  {
+    "id": "workshop-series-2",
+    "category": "skillsSession",
+    "type": "online",
+    "status": "closed",
+    "title": "Build & Learn Workshop Series Korea #2 — Schema Design Patterns and Antipatterns",
+    "date": "2026-03-11",
+    "time": "14:00 ~ 16:00",
+    "location": "온라인",
+    "description": [
+      "Extended Reference",
+      "Computed",
+      "Inheritance",
+      "꼭 피해야 할 안티패턴"
+    ],
+    "attendees": 50,
+    "link": "https://learn.mongodb.com/courses/schema-design-patterns-and-antipatterns",
+    "linkLabel": "MongoDB University 강의 보기",
+    "createdAt": "2026-02-12",
+    "updatedAt": "2026-02-12"
+  },
+  {
+    "id": "workshop-series-1",
+    "category": "skillsSession",
+    "type": "online",
+    "status": "closed",
+    "title": "Build & Learn Workshop Series Korea #1 — Data Modeling",
+    "date": "2026-03-05",
+    "time": "14:00 ~ 16:00",
+    "location": "온라인",
+    "description": [
+      "Document Model 설계",
+      "Embedding vs Referencing",
+      "Schema Validation 실습"
+    ],
+    "attendees": 120,
+    "link": "https://learn.mongodb.com/courses/relational-to-document-model",
+    "linkLabel": "MongoDB University 강의 보기",
+    "createdAt": "2026-02-12",
+    "updatedAt": "2026-02-12"
+  },
+  {
+    "id": "mug-korea-seoul-2026-1",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "closed",
+    "title": "Seoul MUG MeetUp #2 — FEB 2026",
+    "date": "2026-02-26",
+    "time": "19:00 ~ 21:30",
+    "location": "서울 강남구 역삼동 629-1 인사이트 빌딩 지하 1층",
+    "description": [
+      "2026 MongoDB 최신 기술 동향",
+      "인덱스 & 쿼리 최적화 실전 지식 (커뮤니티 픽!)",
+      "데이터 마이그레이션 & RAG 구축 (실사용 사례)",
+      "네트워킹 & 커뮤니티 활동 기회"
+    ],
+    "attendees": 28,
+    "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/313060611/",
+    "linkLabel": "Meetup 페이지 열기",
+    "createdAt": "2026-01-15",
+    "updatedAt": "2026-02-27"
+  },
+  {
+    "id": "ai-skills-session-3",
+    "category": "skillsSession",
+    "type": "online",
+    "status": "closed",
+    "title": "MongoDB AI Skills Session #3 — AI 에이전트 구축 A to Z",
+    "date": "2025-12-20",
+    "time": "09:00 ~ 12:00",
+    "location": "온라인",
+    "description": [
+      "AI 에이전트의 기본 개념 이해",
+      "MongoDB를 활용한 AI 에이전트 상태 관리",
+      "다양한 AI 에이전트 프레임워크 사용"
+    ],
+    "attendees": 42,
+    "link": "https://learn.mongodb.com/courses/ai-agents-with-mongodb",
+    "linkLabel": "MongoDB University 강의 보기",
+    "createdAt": "2026-01-15",
+    "updatedAt": "2026-01-15"
+  },
+  {
+    "id": "ai-skills-session-2",
+    "category": "skillsSession",
+    "type": "online",
+    "status": "closed",
+    "title": "MongoDB AI Skills Session #2 — MongoDB를 사용한 RAG 앱 구축",
+    "date": "2025-12-13",
+    "time": "09:00 ~ 12:00",
+    "location": "온라인",
+    "description": [
+      "RAG 아키텍처 이해",
+      "MongoDB와 임베딩 모델 및 LLM 연동 방법",
+      "데이터 검색 및 답변 생성 과정 구현"
+    ],
+    "attendees": 59,
+    "link": "https://learn.mongodb.com/courses/rag-with-mongodb",
+    "linkLabel": "MongoDB University 강의 보기",
+    "createdAt": "2026-01-15",
+    "updatedAt": "2026-01-15"
+  },
+  {
+    "id": "ai-skills-session-1",
+    "category": "skillsSession",
+    "type": "online",
+    "status": "closed",
+    "title": "MongoDB AI Skills Session #1 — 벡터 검색: 초급부터 고급까지",
+    "date": "2025-12-06",
+    "time": "09:00 ~ 12:00",
+    "location": "온라인",
+    "description": [
+      "벡터 검색의 기본 개념 이해",
+      "MongoDB Atlas Vector Search 설정 및 활용",
+      "다양한 벡터 검색 알고리즘 및 기법 적용"
+    ],
+    "attendees": 122,
+    "link": "https://learn.mongodb.com/courses/vector-search-fundamentals",
+    "linkLabel": "MongoDB University 강의 보기",
+    "createdAt": "2026-01-15",
+    "updatedAt": "2026-01-15"
+  },
+  {
+    "id": "mug-korea-seoul-2025-11",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "closed",
+    "title": "MUG Seoul MeetUp #1",
+    "date": "2025-11-28",
+    "time": "12:00 ~ 14:30",
+    "location": "서울 지역",
+    "description": [
+      "MongoDB와 AI 시대의 데이터 전략",
+      "실전 의료 데이터 사례 공유",
+      "커뮤니티 로드맵 & 네트워킹"
+    ],
+    "attendees": 31,
+    "link": "https://mongodevkr.slack.com/archives/C09JNUJ5XEC/p1764573035347299",
+    "linkLabel": "후기 보기 (Slack)",
+    "createdAt": "2026-01-15",
+    "updatedAt": "2026-01-15"
+  }
+]

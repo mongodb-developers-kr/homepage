@@ -1,10 +1,11 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
+import { contentValidation } from './scripts/validate-content'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), contentValidation()],
   base: '/homepage/',
   build: {
     outDir: 'docs',
@@ -19,6 +20,7 @@ export default defineConfig({
       '@entities': path.resolve(__dirname, './src/entities'),
       '@shared': path.resolve(__dirname, './src/shared'),
       '@assets': path.resolve(__dirname, './src/assets'),
+      '@content': path.resolve(__dirname, './content'),
     },
   },
 })

@@ -1,7 +1,3 @@
-export type Partner = {
-  id: string
-  name: string
-  logo: string
-  imgUrl: string
-  lastUpdated: string
-}
+import type { PartnerContent } from '@shared/content/schema'
+
+export type Partner = PartnerContent

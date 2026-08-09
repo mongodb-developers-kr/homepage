@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react'
+
 export type Stat = {
   id: string
-  icon: React.ReactNode
-  value: number
-  label: StatLabel
+  icon: ReactNode
+  label: string
+  value: string
+  note: string
 }
-
-export type StatLabel = '회원' | '이벤트'
