@@ -17,7 +17,6 @@
     "jsx": "react-jsx",
 
     /* Path aliases - FSD structure */
-    "baseUrl": ".",
     "paths": {
       "@app/*": ["./src/app/*"],
       "@pages/*": ["./src/pages/*"],
