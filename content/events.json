@@ -1,5 +1,24 @@
 [
   {
+    "id": "mug-korea-seoul-2026-8",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "open",
+    "title": "Seoul MUG MeetUp #5 - MongoDB 설계, 운영부터 신뢰성까지",
+    "date": "2026-08-27",
+    "time": "19:00 ~ 21:30",
+    "location": "모임공간 세모네모 (서울 서초구 강남대로53길 12 B1층 B103호)",
+    "description": [
+      "Community Talk: Wrtn 김민종 님 - 실무에서 고민한 MongoDB 샤딩 및 클러스터 관리 전략",
+      "Skills Session: Cluster Reliability"
+    ],
+    "attendees": 0,
+    "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/316004107/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=477271970",
+    "linkLabel": "Meetup 페이지 열기",
+    "createdAt": "2026-08-16",
+    "updatedAt": "2026-08-16"
+  },
+  {
     "id": "mug-korea-seoul-2026-6",
     "category": "meetup",
     "type": "inPerson",

@@ -24,3 +24,5 @@ dist-ssr
 *.env
 docs/journals/*
 .cursor
+AGENTS.md
+chore

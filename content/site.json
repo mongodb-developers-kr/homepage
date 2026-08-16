@@ -13,7 +13,8 @@
     "speakerForm": "https://docs.google.com/forms/d/e/1FAIpQLSdLIyRzgC8heWOZZk8fEOsHkBVi6ys5CPLxedrcuStbs10igQ/viewform",
     "questionForm": "https://docs.google.com/forms/d/e/1FAIpQLScqHhLlPpEIwumvRaIGapwnVNjCohjngWKKxkzJnTjProxYSg/viewform",
     "partnershipForm": "https://docs.google.com/forms/d/e/1FAIpQLScLVinaWgowylJpWEgIeOYkrk2BQlETPzNdu7x1iyrHoUqL2w/viewform",
-    "codeOfConduct": "https://www.mongodb.com/community-code-of-conduct"
+    "codeOfConduct": "https://www.mongodb.com/community-code-of-conduct",
+    "meetupPastEvents": "https://www.meetup.com/mongodb-usergroup-seoul/events/past/"
   },
   "resources": [
     {
