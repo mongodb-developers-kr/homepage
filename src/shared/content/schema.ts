@@ -114,6 +114,7 @@ export const siteSchema = z.object({
     questionForm: z.url(),
     partnershipForm: z.url(),
     codeOfConduct: z.url(),
+    meetupPastEvents: z.url(),
   }),
   resources: z
     .array(z.object({ label: z.string().min(1), href: z.url() }))

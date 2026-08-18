@@ -13,8 +13,8 @@ const formatDate = (date: string) =>
     day: 'numeric',
   })
 
-const scrollToEvents = () => {
-  document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })
+const openExternal = (url: string) => {
+  window.open(url, '_blank', 'noopener,noreferrer')
 }
 
 export const Hero = () => {
@@ -37,18 +37,16 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             className="gap-2 font-bold"
-            onClick={() => {
-              window.open(
-                site.links.slackJoin,
-                '_blank',
-                'noopener,noreferrer',
-              )
-            }}
+            onClick={() => openExternal(site.links.slackJoin)}
           >
             <FiMessageSquare size={20} />
             Slack 워크스페이스 가입하기
           </Button>
-          <Button variant="ghost" className="gap-2" onClick={scrollToEvents}>
+          <Button
+            variant="ghost"
+            className="gap-2"
+            onClick={() => openExternal(site.links.meetupPastEvents)}
+          >
             지난 밋업 둘러보기
             <FiArrowRight size={18} />
           </Button>
@@ -57,7 +55,9 @@ export const Hero = () => {
         <div className="mt-12 flex justify-center">
           {nextEvent ? (
             <button
-              onClick={scrollToEvents}
+              onClick={() => {
+                if (nextEvent.link) openExternal(nextEvent.link)
+              }}
               className="flex flex-col sm:flex-row items-center gap-x-3 gap-y-1 rounded-full border border-primary/40 bg-primary/5 px-5 py-3 text-sm text-gray-300 hover:border-primary transition-colors"
             >
               <span className="flex items-center gap-2 text-primary font-semibold">
