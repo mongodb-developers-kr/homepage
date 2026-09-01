@@ -1,24 +1,5 @@
 [
   {
-    "id": "mug-korea-seoul-2026-10",
-    "category": "meetup",
-    "type": "inPerson",
-    "status": "open",
-    "title": "MeetUp #6 - Build What's Next : MUG Seoul x Microsoft",
-    "date": "2026-08-27",
-    "time": "19:00 ~ 21:30",
-    "location": "Microsoft Korea Office(종로구 중학동 종로1길 50 · 서울)",
-    "description": [
-      "MongoDB와 Microsoft의 개발자 생태계가 하나의 개발 경험으로 만납니다. ",
-      "Data · AI Agents · Developer Experience를 하나의 흐름으로 살펴봅니다."
-    ],
-    "attendees": 0,
-    "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/316356394/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=477271970",
-    "linkLabel": "Meetup 페이지 열기",
-    "createdAt": "2026-10-29",
-    "updatedAt": "2026-10-29"
-  },
-  {
     "id": "mug-korea-seoul-2026-8",
     "category": "meetup",
     "type": "inPerson",
@@ -31,7 +12,7 @@
       "Community Talk: Wrtn 김민종 님 - 실무에서 고민한 MongoDB 샤딩 및 클러스터 관리 전략",
       "Skills Session: Cluster Reliability"
     ],
-    "attendees": 28,
+    "attendees": 0,
     "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/316004107/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=477271970",
     "linkLabel": "Meetup 페이지 열기",
     "createdAt": "2026-08-16",
