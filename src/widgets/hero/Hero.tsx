@@ -1,17 +1,43 @@
-import { site, upcomingEvents } from '@shared/content'
+import {
+  type EventContent,
+  formatEventDate,
+  nextEvent,
+  site,
+} from '@shared/content'
 import { Button } from '@shared/ui/Button'
 import { FiArrowRight, FiCalendar, FiMessageSquare } from 'react-icons/fi'
 
-const nextEvent = [...upcomingEvents].sort((a, b) =>
-  a.date.localeCompare(b.date),
-)[0]
+const badgeClassName =
+  'flex flex-col sm:flex-row items-center gap-x-3 gap-y-1 rounded-full border border-primary/40 bg-primary/5 px-5 py-3 text-sm text-gray-300'
 
-const formatDate = (date: string) =>
-  new Date(date).toLocaleDateString('ko-KR', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
+const NextEventBadge = ({ event }: { event: EventContent }) => {
+  const content = (
+    <>
+      <span className="flex items-center gap-2 text-primary font-semibold">
+        <FiCalendar size={16} />
+        다음 밋업
+      </span>
+      <span>
+        {formatEventDate(event.date)} · {event.location}
+      </span>
+      <span className="text-text-primary font-medium">{event.title}</span>
+    </>
+  )
+
+  if (!event.link) return <div className={badgeClassName}>{content}</div>
+
+  // 링크로 두어야 모바일에서 길게 눌러 공유·복사할 수 있습니다.
+  return (
+    <a
+      href={event.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${badgeClassName} hover:border-primary transition-colors`}
+    >
+      {content}
+    </a>
+  )
+}
 
 const openExternal = (url: string) => {
   window.open(url, '_blank', 'noopener,noreferrer')
@@ -54,23 +80,7 @@ export const Hero = () => {
 
         <div className="mt-12 flex justify-center">
           {nextEvent ? (
-            <button
-              onClick={() => {
-                if (nextEvent.link) openExternal(nextEvent.link)
-              }}
-              className="flex flex-col sm:flex-row items-center gap-x-3 gap-y-1 rounded-full border border-primary/40 bg-primary/5 px-5 py-3 text-sm text-gray-300 hover:border-primary transition-colors"
-            >
-              <span className="flex items-center gap-2 text-primary font-semibold">
-                <FiCalendar size={16} />
-                다음 밋업
-              </span>
-              <span>
-                {formatDate(nextEvent.date)} · {nextEvent.location}
-              </span>
-              <span className="text-text-primary font-medium">
-                {nextEvent.title}
-              </span>
-            </button>
+            <NextEventBadge event={nextEvent} />
           ) : (
             <p className="flex items-center gap-2 rounded-full border border-border bg-white/5 px-5 py-3 text-sm text-gray-400">
               <FiCalendar size={16} />

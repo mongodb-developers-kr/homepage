@@ -1,6 +1,7 @@
 import { site } from '@shared/content'
 import { linkStyles } from '@shared/lib/styles'
-import { FaGithub, FaSlack } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaSlack } from 'react-icons/fa'
+import { FiCalendar } from 'react-icons/fi'
 
 export const Footer = () => {
   return (
@@ -65,6 +66,24 @@ export const Footer = () => {
                 className={linkStyles.social}
               >
                 <FaSlack size={20} />
+              </a>
+              <a
+                href={site.links.linkedinGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn 그룹"
+                className={linkStyles.social}
+              >
+                <FaLinkedin size={20} />
+              </a>
+              <a
+                href={site.links.lumaGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Luma 행사 캘린더"
+                className={linkStyles.social}
+              >
+                <FiCalendar size={20} />
               </a>
             </div>
             <a

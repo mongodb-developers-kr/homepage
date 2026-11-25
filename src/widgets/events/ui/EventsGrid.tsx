@@ -21,7 +21,8 @@ import {
 
 const GAP = 32
 const MOBILE_GAP = 16
-const SLIDE_PADDING = 48
+// 슬라이드 컨테이너의 px-12 (좌우 48px × 2). 한쪽만 빼면 넘길수록 위치가 밀립니다.
+const SLIDE_PADDING = 96
 const DRAG_THRESHOLD = 50
 
 const EventCard = ({ event }: { event: Event }) => {

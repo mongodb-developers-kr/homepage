@@ -109,6 +109,8 @@ export const siteSchema = z.object({
     slackJoin: z.url(),
     slackGeneral: z.url(),
     slackQuestions: z.url(),
+    linkedinGroup: z.url(),
+    lumaGroup: z.url(),
     github: z.url(),
     speakerForm: z.url(),
     questionForm: z.url(),

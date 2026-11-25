@@ -10,6 +10,13 @@ export default defineConfig({
   build: {
     outDir: "docs",
     emptyOutDir: true,
+    rollupOptions: {
+      // GitHub Pages 는 SPA 경로를 모르므로 /links/ 를 별도 HTML 로 만듭니다.
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        links: path.resolve(__dirname, "links/index.html"),
+      },
+    },
   },
   resolve: {
     alias: {

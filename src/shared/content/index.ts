@@ -50,6 +50,20 @@ export const upcomingEvents = events.filter(
   (event) => getEventStatus(event) !== 'closed',
 )
 
+/** 가장 가까운 다가오는 이벤트. 없으면 undefined. */
+export const nextEvent = [...upcomingEvents].sort((a, b) =>
+  a.date.localeCompare(b.date),
+)[0] as EventContent | undefined
+
+/** 'YYYY-MM-DD' → '2026년 12월 15일' */
+export const formatEventDate = (date: string) =>
+  new Date(`${date}T00:00:00+09:00`).toLocaleDateString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+
 /** public/ 에 있는 파일을 base 경로를 포함한 URL 로 바꿉니다. */
 export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
