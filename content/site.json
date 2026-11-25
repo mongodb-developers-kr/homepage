@@ -3,8 +3,8 @@
   "tagline": "MongoDB 한국 개발자 모임",
   "description": "MongoDB를 사용하며 고민했던 경험, 배운 것, 시행착오를 개발자들끼리 편하게 나누는 커뮤니티입니다.",
   "url": "https://mongodb-developers-kr.org/",
-  "memberCount": 456,
-  "memberCountNote": "Slack & MeetUp 기준",
+  "memberCount": 480,
+  "memberCountNote": "Slack & MeetUp & Luma 기준",
   "links": {
     "slackJoin": "https://mdb.link/mongodevkr",
     "slackGeneral": "https://mongodevkr.slack.com/archives/C09J83YK45P",
