@@ -49,7 +49,7 @@ export class CacheClient {
   /**
    * GET 요청을 수행합니다.
    *
-   * @param endpoint - API 엔드포인트 (예: 'groups:all')
+   * @param endpoint - API 엔드포인트 (예: 'groups')
    * @returns Promise<T> - 응답 데이터
    */
   async get<T>(endpoint: string): Promise<T> {

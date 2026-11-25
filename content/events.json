@@ -1,11 +1,31 @@
 [
   {
-    "id": "mug-korea-seoul-2026-10",
+    "id": "mug-korea-seoul-2026-12",
     "category": "meetup",
     "type": "inPerson",
     "status": "open",
+    "title": "MUG Seoul DEC 2026 - MongoDB 2026 Highlights",
+    "date": "2026-12-15",
+    "time": "19:00 ~ 21:30",
+    "location": "Pairing Studio 지하 1층 (서울 서초구 사평대로57길 63)",
+    "description": [
+      "2026 MongoDB Highlights (왕지영, MongoDB SA) - MongoDB 9.0, Atlas Agent Engine, Atlas Infinite",
+      "Seoul MUG의 지난 1년 (김종현) - 발표자·주제 회고와 MUG 리더 활동기",
+      "Community Talk & Q&A",
+      "단체 사진 & 네트워킹"
+    ],
+    "link": "https://luma.com/ftkf0lxh",
+    "linkLabel": "Luma에서 신청하기",
+    "createdAt": "2026-11-25",
+    "updatedAt": "2026-11-25"
+  },
+  {
+    "id": "mug-korea-seoul-2026-10",
+    "category": "meetup",
+    "type": "inPerson",
+    "status": "closed",
     "title": "MeetUp #6 - Build What's Next : MUG Seoul x Microsoft",
-    "date": "2026-08-27",
+    "date": "2026-10-29",
     "time": "19:00 ~ 21:30",
     "location": "Microsoft Korea Office(종로구 중학동 종로1길 50 · 서울)",
     "description": [
@@ -16,7 +36,7 @@
     "link": "https://www.meetup.com/mongodb-usergroup-seoul/events/316356394/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=477271970",
     "linkLabel": "Meetup 페이지 열기",
     "createdAt": "2026-10-29",
-    "updatedAt": "2026-10-29"
+    "updatedAt": "2026-11-25"
   },
   {
     "id": "mug-korea-seoul-2026-8",

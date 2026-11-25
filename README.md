@@ -122,6 +122,7 @@ pnpm install
 pnpm dev      # http://localhost:5173
 pnpm build    # content/ 검증 후 docs/ 에 빌드
 pnpm lint
+pnpm check    # lint 후 build
 ```
 
 `homepage-api` 없이도 동작합니다. 모임 목록은 `content/groups.json` 으로 먼저 그려지고,
@@ -129,9 +130,21 @@ API 응답이 성공했을 때만 최신 데이터로 교체됩니다.
 
 ### 환경 변수
 
+```bash
+cp .env.example .env
 ```
-VITE_CACHE_API=https://api.mugkrapi.work
-```
+
+`.env.example` 의 `VITE_CACHE_API=https://api.mongodb-developers-kr.org/content` 는
+`homepage-api` 통합 진입점 전환 후 사용할 canonical target base입니다. 클라이언트가
+여기에 `/groups`를 붙여 `https://api.mongodb-developers-kr.org/content/groups`를
+호출합니다. 따라서 이 예시는 새 API route가 이미 배포되었다는 의미가 아닙니다.
+
+현재 legacy 환경을 확인할 때는 기존 origin 을
+`https://api.mugkrapi.work` 로 표기합니다. `api.mugkrapi.works` 는 사용하지 않습니다.
+
+콘텐츠 검증은 Vite 빌드 플러그인으로 실행되므로 독립 실행기가 아닙니다.
+`pnpm content:validate`, `pnpm docs:regenerate`, `pnpm build` 는 모두 같은 검증 및
+`docs/` 재생성 파이프라인을 실행합니다.
 
 ## 기여하기
 

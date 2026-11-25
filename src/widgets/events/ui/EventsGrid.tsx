@@ -4,7 +4,7 @@ import {
   EventDescription,
   EventTypeText,
 } from '@entities/event'
-import { events } from '@shared/content'
+import { events, getEventStatus } from '@shared/content'
 import { badgeStyles } from '@shared/lib/styles'
 import { cn } from '@shared/lib/utils'
 import { Button } from '@shared/ui/Button'
@@ -25,7 +25,8 @@ const SLIDE_PADDING = 48
 const DRAG_THRESHOLD = 50
 
 const EventCard = ({ event }: { event: Event }) => {
-  const isUpcoming = event.status === 'open' || event.status === 'preparation'
+  const status = getEventStatus(event)
+  const isUpcoming = status === 'open' || status === 'preparation'
 
   return (
     <Card className="flex flex-col h-full bg-bg-tertiary border-border">
@@ -36,7 +37,7 @@ const EventCard = ({ event }: { event: Event }) => {
             isUpcoming ? badgeStyles.upcoming : badgeStyles.past,
           )}
         >
-          {EventDescription[event.status]}
+          {EventDescription[status]}
         </span>
         <span className="text-[11px] font-bold tracking-wider px-2 py-1 rounded-full bg-primary/10 text-text-primary border border-secondary">
           {EventTypeText[event.type]}

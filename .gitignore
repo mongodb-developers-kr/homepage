@@ -23,6 +23,8 @@ dist-ssr
 *.sw?
 *.env
 docs/journals/*
-.cursor
-AGENTS.md
 chore
+
+# Agent docs are owned by the orchestration repo
+AGENTS.md
+.cursor/
